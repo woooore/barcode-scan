@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "얼마야 - 편의점·마트 바코드 가격스캐너",
+    "slug": "convenience-price-scanner",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": false,
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "상품의 바코드를 스캔하여 매장별 가격과 1+1 행사 정보를 확인하기 위해 카메라 권한이 필요합니다."
+      }
+    },
+    "android": {
+      "permissions": [
+        "android.permission.CAMERA"
+      ],
+      "package": "com.wooja.conveniencepricescanner"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "상품 바코드를 스캔하여 가격과 행사 정보를 조회하기 위해 카메라 접근 권한을 허용해주세요."
+        }
+      ]
+    ]
+  }
+}
