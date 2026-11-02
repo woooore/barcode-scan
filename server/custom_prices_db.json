@@ -32,5 +32,60 @@
       }
     },
     "isUserContributed": true
+  },
+  "8800402600011": {
+    "barcode": "8800402600011",
+    "name": "가나 초콜릿",
+    "brand": "롯데웰푸드",
+    "category": "스낵/초콜릿",
+    "volumeOrWeight": "70g",
+    "stores": {
+      "GS25": {
+        "price": 2000,
+        "promoType": "NONE",
+        "promoLabel": "정가 판매",
+        "updatedAt": "2026-11-02"
+      },
+      "CU": {
+        "price": 2000,
+        "promoType": "NONE",
+        "promoLabel": "정가 판매",
+        "updatedAt": "2026-11-02"
+      },
+      "SEVEN": {
+        "price": 2000,
+        "promoType": "NONE",
+        "promoLabel": "정가 판매",
+        "updatedAt": "2026-11-02"
+      },
+      "EMART24": {
+        "price": 2000,
+        "promoType": "NONE",
+        "promoLabel": "정가 판매",
+        "updatedAt": "2026-11-02"
+      }
+    },
+    "isUserContributed": true
+  },
+  "8809984170653": {
+    "barcode": "8809984170653",
+    "name": "말랑쫀득 초코찹쌀떡",
+    "brand": "기타",
+    "category": "스낵/간식",
+    "stores": {
+      "GS25": {
+        "price": 3500,
+        "promoType": "NONE",
+        "promoLabel": "일반 상품",
+        "updatedAt": "2026-11-02"
+      },
+      "CU": {
+        "price": 3500,
+        "promoType": "NONE",
+        "promoLabel": "일반 상품",
+        "updatedAt": "2026-11-02"
+      }
+    },
+    "isUserContributed": true
   }
 }
