@@ -89,18 +89,25 @@ export async function queryGeminiForBarcode(params: {
   // 2순위: 브라우저 직접 구글 API 호출 (사용자 직접 키 제공 시)
   if (!apiKey || !apiKey.trim()) return null;
 
-  const prompt = `당신은 한국 편의점(GS25, CU, 세븐일레븐, 이마트24) 및 대형마트 유통 상품 전문 데이터 분석 AI입니다.
+  const prompt = `당신은 대한민국 편의점(GS25, CU, 세븐일레븐, 이마트24) 유통 상품 가격 및 행사 전문 AI입니다.
 바코드 번호: [${barcode}]
 선택된 매장: [${storeId}]
 
-이 13자리 바코드(880...) 상품의 정확한 상품명, 제조사/브랜드, 규격/용량, 카테고리, 그리고 ${storeId} 편의점 기준 단품 판매 가격(원) 및 1+1 / 2+1 행사 여부를 추론하여 오직 순수 JSON으로만 답변하세요:
+이 13자리 바코드(880...) 상품의 실제 공식 상품명, 제조사, 정확한 규격/용량, 카테고리, 그리고 ${storeId} 편의점 기준 실제 매장 판매가격(원) 및 1+1/2+1 행사 여부를 현실적으로 정확하게 분석하세요.
+(예시 가이드:
+- 칠성사이다 제로 500ml 페트는 편의점 정가 2,200원이며 자주 1+1 행사를 진행합니다.
+- 칠성사이다 제로 355ml 캔은 2,000원(1+1), 250ml 캔은 1,700원입니다.
+- 코카콜라 제로 500ml 페트는 2,400원(1+1)입니다.
+- 상품의 실제 규격에 맞는 정확한 편의점 단품 판매가와 1+1 / 2+1 행사 여부를 판별하세요.)
+
+반드시 순수 JSON으로만 답변하세요:
 {
   "barcode": "${barcode}",
-  "name": "상품명",
-  "brand": "제조사/브랜드",
-  "category": "카테고리",
-  "volumeOrWeight": "규격",
-  "price": 2400,
+  "name": "공식 상품명 (예: 칠성사이다 제로 500ml)",
+  "brand": "제조사 (예: 롯데칠성음료)",
+  "category": "음료",
+  "volumeOrWeight": "500ml",
+  "price": 2200,
   "promoType": "1+1",
   "promoLabel": "1+1 행사 상품",
   "confidence": "high"
@@ -194,17 +201,17 @@ export async function queryGeminiVisionForPhoto(params: {
   if (!apiKey || !apiKey.trim()) return null;
 
   const prompt = `이 사진은 한국 편의점(${storeId}) 진열대 또는 상품의 사진입니다.
-사진 속 라벨 텍스트, 바코드 번호(숫자 880...), 제품 패키지 디자인을 정밀 판독하세요.
-판독한 상품의 바코드 번호, 상품명, 제조사/브랜드, ${storeId} 기준 판매 가격(원), 1+1/2+1 행사 여부를 아래 JSON 형식으로만 반환하세요:
+사진 속 라벨 텍스트, 바코드 번호(숫자 880...), 제품 패키지 디자인(캔인지 페트병인지 용량 포함)을 정밀 판독하세요.
+판독한 상품의 바코드 번호, 공식 상품명, 제조사/브랜드, ${storeId} 기준 실제 편의점 판매 가격(원), 1+1/2+1 행사 여부를 아래 JSON 형식으로만 반환하세요:
 {
-  "barcode": "바코드 번호",
-  "name": "상품명",
-  "brand": "제조사",
+  "barcode": "바코드 번호 (없으면 880으로 시작하는 추정 바코드)",
+  "name": "정확한 상품명과 규격 (예: 칠성사이다 제로 500ml)",
+  "brand": "제조사 (예: 롯데칠성음료, LG생활건강)",
   "category": "카테고리",
-  "volumeOrWeight": "용량",
-  "price": 2000,
-  "promoType": "NONE",
-  "promoLabel": "정가 판매",
+  "volumeOrWeight": "용량 (예: 500ml, 100g)",
+  "price": 2200,
+  "promoType": "1+1",
+  "promoLabel": "1+1 행사 상품",
   "confidence": "high"
 }`;
 

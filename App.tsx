@@ -498,10 +498,10 @@ function MainAppContent() {
                   <View style={styles.aiLoadingBox}>
                     <ActivityIndicator size="large" color="#0A84FF" />
                     <Text style={styles.aiLoadingTitle}>
-                      🤖 Gemini AI가 바코드 정보 및 가격을 분석 중...
+                      🤖 Gemini AI가 {selectedStore.name} 가격·행사를 자동 분석 중...
                     </Text>
                     <Text style={styles.aiLoadingSub}>
-                      바코드 [{scannedBarcode}]의 제조사·상품명·{selectedStore.name} 편의점 정가를 추론하고 있습니다.
+                      바코드 [{scannedBarcode}]의 제조사·정확한 용량·실제 매장 판매가격을 조회하고 있습니다.
                     </Text>
                   </View>
                 ) : externalLookupLoading ? (
@@ -525,22 +525,6 @@ function MainAppContent() {
                     아직 {selectedStore.name} 가격 정보가 등록되지 않은 바코드입니다.
                   </Text>
                 )}
-
-                {/* Gemini AI 자동 분석 버튼 */}
-                <TouchableOpacity
-                  style={styles.geminiAskBtn}
-                  onPress={() => handleAskGemini(scannedBarcode)}
-                  disabled={aiAnalyzing}
-                >
-                  <Text style={styles.geminiAskBtnText}>
-                    ✨ Gemini AI에게 이 바코드 물어보기 (자동 분석)
-                  </Text>
-                  <Text style={styles.geminiAskBtnSub}>
-                    {geminiApiKey || geminiReady
-                      ? 'AI가 제조사·상품명·편의점 가격을 즉시 찾아 등록합니다'
-                      : '구글 Gemini AI 키를 연결하여 1초 만에 자동 분석'}
-                  </Text>
-                </TouchableOpacity>
 
                 <TouchableOpacity
                   style={[

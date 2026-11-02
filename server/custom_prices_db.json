@@ -1,0 +1,17 @@
+{
+  "8801056251727": {
+    "barcode": "8801056251727",
+    "name": "칠성사이다 250ml",
+    "brand": "롯데칠성음료",
+    "category": "음료",
+    "stores": {
+      "GS25": {
+        "price": 1700,
+        "promoType": "NONE",
+        "promoLabel": "정가 판매",
+        "updatedAt": "2026-11-02"
+      }
+    },
+    "isUserContributed": true
+  }
+}

@@ -68,21 +68,81 @@ export const BarcodeScannerBox: React.FC<BarcodeScannerBoxProps> = ({
       try {
         const result = await scanBarcodeFromImageFile(file);
         setUploadedImage(result.previewUrl);
-        setIsAnalyzingImage(false);
 
         if (result.success && result.barcode) {
+          setIsAnalyzingImage(false);
           setImageScanFeedback({
             type: 'success',
-            message: `🎉 바코드 [${result.barcode}] 감지 완료!`,
+            message: `🎉 바코드 [${result.barcode}] 감지 완료! 실시간 가격을 조회합니다.`,
           });
           onBarcodeDetected(result.barcode);
         } else {
+          // 바코드 선이 흐려 인식이 안 될 경우 사용자가 버튼을 누를 필요 없이 즉시 AI Vision으로 자동 판독!
           setImageScanFeedback({
-            type: 'error',
+            type: 'success',
             message:
-              result.error ||
-              '사진에서 바코드를 찾지 못했습니다. 아래 Gemini Vision AI 버튼으로 사진을 직접 분석하거나 바코드 번호를 입력해 주세요.',
+              '🤖 바코드가 흐려 Gemini Vision AI로 상품명과 가격을 자동 판독하고 있습니다...',
           });
+
+          const base64Data = await new Promise<string>((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(reader.result as string);
+            reader.onerror = reject;
+            reader.readAsDataURL(file);
+          });
+
+          const ai = await queryGeminiVisionForPhoto({
+            imageBase64: base64Data,
+            mimeType: file.type || 'image/jpeg',
+            storeId: selectedStore.id,
+            apiKey: geminiApiKey,
+          });
+
+          setIsAnalyzingImage(false);
+
+          if (ai && (ai.name || ai.barcode)) {
+            setImageScanFeedback({
+              type: 'success',
+              message: `✨ AI 자동 판독 완료: ${ai.name} (${ai.price.toLocaleString()}원)`,
+            });
+            const finalBarcode =
+              ai.barcode && ai.barcode.length >= 8
+                ? ai.barcode
+                : `ai_${Date.now()}`;
+            if (ai.barcode && ai.barcode.length >= 8) {
+              onBarcodeDetected(ai.barcode);
+            }
+            if (onAiProductFound) {
+              const aiProd: ProductItem = {
+                barcode: finalBarcode,
+                name: ai.name,
+                brand: ai.brand,
+                category: ai.category,
+                volumeOrWeight: ai.volumeOrWeight,
+                imageEmoji: '🤖',
+                stores: {
+                  [selectedStore.id]: {
+                    price: ai.price,
+                    promoType: ai.promoType,
+                    promoLabel:
+                      ai.promoLabel ||
+                      (ai.promoType !== 'NONE'
+                        ? `${ai.promoType} 행사 상품`
+                        : '정가 판매'),
+                    updatedAt: new Date().toISOString().slice(0, 10),
+                  },
+                },
+                isUserContributed: true,
+              };
+              onAiProductFound(aiProd);
+            }
+          } else {
+            setImageScanFeedback({
+              type: 'error',
+              message:
+                '사진에서 상품을 찾지 못했습니다. 상품명이나 바코드가 더 선명한 사진으로 시도해 주세요.',
+            });
+          }
         }
       } catch (err: any) {
         setIsAnalyzingImage(false);
@@ -452,34 +512,6 @@ export const BarcodeScannerBox: React.FC<BarcodeScannerBoxProps> = ({
                 {imageScanFeedback.message}
               </Text>
             </View>
-          )}
-
-          {uploadedImage && (
-            <TouchableOpacity
-              style={styles.geminiVisionBtn}
-              onPress={handleAnalyzeWithGeminiVision}
-              disabled={isGeminiVisionLoading}
-            >
-              {isGeminiVisionLoading ? (
-                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-                  <ActivityIndicator color="#FFFFFF" size="small" />
-                  <Text style={styles.geminiVisionBtnText}>
-                    🤖 Gemini AI가 사진 속 글씨·제품명·가격을 판독 중...
-                  </Text>
-                </View>
-              ) : (
-                <View style={{ alignItems: 'center' }}>
-                  <Text style={styles.geminiVisionBtnText}>
-                    ✨ Gemini Vision AI로 사진 속 제품명·가격 바로 판독하기
-                  </Text>
-                  <Text style={styles.geminiVisionBtnSub}>
-                    {geminiApiKey
-                      ? '바코드 선이 흐려도 사진 속 상품 글씨를 AI가 직접 읽어냅니다'
-                      : 'AI 키 연결 후 사진을 자동으로 분석합니다'}
-                  </Text>
-                </View>
-              )}
-            </TouchableOpacity>
           )}
         </View>
       )}
