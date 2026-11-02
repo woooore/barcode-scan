@@ -171,20 +171,36 @@ export const BarcodeScannerBox: React.FC<BarcodeScannerBoxProps> = ({
                   <View style={[styles.corner, styles.cornerBR]} />
                   <View style={styles.laserLine} />
                 </View>
-              ) : (
-                <View style={styles.autoDetectedBadge}>
-                  <Text style={styles.autoDetectedBadgeText}>
-                    ✨ 사진 전체 영역에서 바코드 자동 감지 완료
+              ) : isAnalyzingImage ? (
+                <View style={[styles.autoDetectedBadge, { borderColor: '#0A84FF' }]}>
+                  <Text style={[styles.autoDetectedBadgeText, { color: '#0A84FF' }]}>
+                    ⏳ 사진 속 바코드(880...) 탐색 중...
                   </Text>
                 </View>
-              )}
+              ) : imageScanFeedback?.type === 'success' ? (
+                <View style={styles.autoDetectedBadge}>
+                  <Text style={styles.autoDetectedBadgeText}>
+                    🎉 바코드 감지 성공!
+                  </Text>
+                </View>
+              ) : imageScanFeedback?.type === 'error' ? (
+                <View style={[styles.autoDetectedBadge, { borderColor: '#FF453A' }]}>
+                  <Text style={[styles.autoDetectedBadgeText, { color: '#FF453A' }]}>
+                    ⚠️ 바코드 인식 실패
+                  </Text>
+                </View>
+              ) : null}
 
               <Text style={styles.guideText}>
                 {isAnalyzingImage
                   ? '⏳ 사진 속 바코드(880...)를 자동으로 스캔하는 중...'
+                  : imageScanFeedback?.type === 'success'
+                  ? '✅ 바코드 인식 완료! 아래에서 실시간 가격을 확인하세요.'
+                  : imageScanFeedback?.type === 'error'
+                  ? '❌ 바코드 줄무늬가 흐려서 읽지 못했습니다. 아래 번호를 직접 입력해 주세요.'
                   : uploadedImage
-                  ? '✅ 바코드 인식 완료! (빨간 줄에 맞출 필요 없이 어디에 있든 자동 인식됩니다)'
-                  : '💡 사진 속 구석이나 비스듬히 있어도 바코드가 자동으로 감지됩니다!'}
+                  ? '사진 분석 완료'
+                  : '💡 사진 속 어느 위치에 바코드가 있어도 자동으로 감지됩니다!'}
               </Text>
             </View>
           </View>
