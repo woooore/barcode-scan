@@ -163,20 +163,28 @@ export const BarcodeScannerBox: React.FC<BarcodeScannerBoxProps> = ({
                 </TouchableOpacity>
               </View>
 
-              <View style={styles.reticleBox}>
-                <View style={[styles.corner, styles.cornerTL]} />
-                <View style={[styles.corner, styles.cornerTR]} />
-                <View style={[styles.corner, styles.cornerBL]} />
-                <View style={[styles.corner, styles.cornerBR]} />
-                <View style={styles.laserLine} />
-              </View>
+              {!uploadedImage ? (
+                <View style={styles.reticleBox}>
+                  <View style={[styles.corner, styles.cornerTL]} />
+                  <View style={[styles.corner, styles.cornerTR]} />
+                  <View style={[styles.corner, styles.cornerBL]} />
+                  <View style={[styles.corner, styles.cornerBR]} />
+                  <View style={styles.laserLine} />
+                </View>
+              ) : (
+                <View style={styles.autoDetectedBadge}>
+                  <Text style={styles.autoDetectedBadgeText}>
+                    ✨ 사진 전체 영역에서 바코드 자동 감지 완료
+                  </Text>
+                </View>
+              )}
 
               <Text style={styles.guideText}>
                 {isAnalyzingImage
-                  ? '⏳ 사진 속 바코드(880...)를 인식하는 중입니다...'
+                  ? '⏳ 사진 속 바코드(880...)를 자동으로 스캔하는 중...'
                   : uploadedImage
-                  ? '✅ 첨부된 사진 분석 완료! 아래에서 실시간 가격을 확인하세요'
-                  : '📷 아래 [바코드 사진 첨부] 버튼으로 실제 촬영 사진을 넣어보세요!'}
+                  ? '✅ 바코드 인식 완료! (빨간 줄에 맞출 필요 없이 어디에 있든 자동 인식됩니다)'
+                  : '💡 사진 속 구석이나 비스듬히 있어도 바코드가 자동으로 감지됩니다!'}
               </Text>
             </View>
           </View>
@@ -699,5 +707,19 @@ const styles = StyleSheet.create({
   },
   feedbackTextError: {
     color: '#FF453A',
+  },
+  autoDetectedBadge: {
+    alignSelf: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.75)',
+    paddingHorizontal: 14,
+    paddingVertical: 6,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: '#30D158',
+  },
+  autoDetectedBadgeText: {
+    color: '#30D158',
+    fontSize: 12,
+    fontWeight: '800',
   },
 });
