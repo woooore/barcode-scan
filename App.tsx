@@ -156,6 +156,21 @@ function MainAppContent() {
           name: ext.name,
           brand: ext.brand,
         });
+
+        // 만약 크롤러 또는 백엔드에서 매장별 가격·행사 정보까지 매칭되었다면 즉시 상품 리스트에 추가하여 가격 표시!
+        if (ext.stores && Object.keys(ext.stores).length > 0) {
+          const autoProduct: ProductItem = {
+            barcode,
+            name: ext.name || `상품 (${barcode})`,
+            brand: ext.brand || '편의점 행사상품',
+            category: ext.category || '편의점 행사상품',
+            imageEmoji: '🏪',
+            imageUrl: ext.imageUrl,
+            stores: ext.stores,
+            isUserContributed: false,
+          };
+          setProducts((prev) => [autoProduct, ...prev.filter((p) => p.barcode !== barcode)]);
+        }
       }
     }
   };

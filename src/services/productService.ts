@@ -16,43 +16,86 @@ export interface ExternalBarcodeLookupResult {
   category?: string;
   volumeOrWeight?: string;
   imageUrl?: string;
+  stores?: Partial<Record<StoreId, StorePriceInfo>>;
 }
 
 /**
- * 저장된 상품 목록과 기본 DB를 병합하여 불러옵니다.
+ * 저장된 상품 목록, 크롤링된 행사 DB, 기본 DB를 병합하여 불러옵니다.
  */
 export async function loadAllProducts(): Promise<ProductItem[]> {
-  try {
-    const raw = await AsyncStorage.getItem(STORAGE_KEY_PRODUCTS);
-    if (!raw) {
-      return INITIAL_PRODUCTS;
-    }
-    const savedProducts: ProductItem[] = JSON.parse(raw);
-    const map = new Map<string, ProductItem>();
+  const map = new Map<string, ProductItem>();
 
-    for (const item of INITIAL_PRODUCTS) {
-      map.set(item.barcode, item);
-    }
-    for (const item of savedProducts) {
-      const existing = map.get(item.barcode);
-      if (existing) {
-        map.set(item.barcode, {
-          ...existing,
-          ...item,
-          stores: {
-            ...existing.stores,
-            ...item.stores,
-          },
-        });
-      } else {
-        map.set(item.barcode, item);
+  // 1. 기본 내장 인기 상품
+  for (const item of INITIAL_PRODUCTS) {
+    map.set(item.barcode, item);
+  }
+
+  // 2. 로컬 크롤러 백엔드 서버(이달의 편의점 행사 DB) 동기화 시도 (1.5초 제한)
+  try {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 1500);
+    const res = await fetch(`${CRAWLER_API_BASE_URL}/events`, {
+      signal: controller.signal,
+    });
+    clearTimeout(timer);
+    if (res.ok) {
+      const data = await res.json();
+      if (data && Array.isArray(data.items)) {
+        for (const item of data.items) {
+          if (!item.barcode) continue;
+          const existing = map.get(item.barcode);
+          if (existing) {
+            map.set(item.barcode, {
+              ...existing,
+              stores: {
+                ...existing.stores,
+                ...item.stores,
+              },
+            });
+          } else {
+            map.set(item.barcode, {
+              barcode: item.barcode,
+              name: item.name,
+              brand: item.brand || '편의점 행사상품',
+              category: item.category || '편의점 행사상품',
+              imageEmoji: '🏪',
+              imageUrl: item.imageUrl,
+              stores: item.stores || {},
+            });
+          }
+        }
       }
     }
-    return Array.from(map.values());
   } catch (err) {
-    console.warn('상품 DB 로드 중 오류 발생 (기본 DB 사용):', err);
-    return INITIAL_PRODUCTS;
+    // 백엔드 미실행 시 조용히 통과
   }
+
+  // 3. 로컬 사용자 제보 저장소 (최우선 순위)
+  try {
+    const raw = await AsyncStorage.getItem(STORAGE_KEY_PRODUCTS);
+    if (raw) {
+      const savedProducts: ProductItem[] = JSON.parse(raw);
+      for (const item of savedProducts) {
+        const existing = map.get(item.barcode);
+        if (existing) {
+          map.set(item.barcode, {
+            ...existing,
+            ...item,
+            stores: {
+              ...existing.stores,
+              ...item.stores,
+            },
+          });
+        } else {
+          map.set(item.barcode, item);
+        }
+      }
+    }
+  } catch (err) {
+    console.warn('사용자 제보 상품 DB 로드 중 오류 발생:', err);
+  }
+
+  return Array.from(map.values());
 }
 
 /**
@@ -154,6 +197,7 @@ export async function lookupUnknownBarcodeExternally(
           category: data.category || '일반상품',
           volumeOrWeight: data.volumeOrWeight,
           imageUrl: data.imageUrl,
+          stores: data.stores,
         };
       }
     }

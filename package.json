@@ -8,6 +8,7 @@
     "web": "expo start --web",
     "preview": "node serve-web.js",
     "build:web": "expo export --platform web",
+    "crawl": "node server/crawler.js",
     "server": "node server/index.js"
   },
   "dependencies": {
