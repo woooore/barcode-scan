@@ -1,14 +1,33 @@
 {
   "8801056251727": {
     "barcode": "8801056251727",
-    "name": "칠성사이다 250ml",
+    "name": "칠성사이다 제로 500ml",
     "brand": "롯데칠성음료",
     "category": "음료",
+    "volumeOrWeight": "500ml",
     "stores": {
       "GS25": {
-        "price": 1700,
+        "price": 2200,
+        "promoType": "1+1",
+        "promoLabel": "1+1 행사 (개당 1,100원)",
+        "updatedAt": "2026-11-02"
+      },
+      "CU": {
+        "price": 2200,
+        "promoType": "1+1",
+        "promoLabel": "1+1 행사 (개당 1,100원)",
+        "updatedAt": "2026-11-02"
+      },
+      "SEVEN": {
+        "price": 2200,
         "promoType": "NONE",
         "promoLabel": "정가 판매",
+        "updatedAt": "2026-11-02"
+      },
+      "EMART24": {
+        "price": 2200,
+        "promoType": "2+1",
+        "promoLabel": "2+1 행사",
         "updatedAt": "2026-11-02"
       }
     },

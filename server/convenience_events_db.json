@@ -1,12 +1,12 @@
 {
-  "crawledAt": "2026-11-02T10:36:55.004Z",
-  "totalRawEvents": 460,
-  "matchedBarcodesCount": 57,
+  "crawledAt": "2026-11-02T12:43:20.759Z",
+  "totalRawEvents": 920,
+  "matchedBarcodesCount": 102,
   "brandStats": {
-    "GS25": 115,
-    "CU": 115,
-    "SEVEN": 115,
-    "EMART24": 115
+    "GS25": 230,
+    "CU": 230,
+    "SEVEN": 230,
+    "EMART24": 230
   },
   "byBarcode": {
     "8801046356807": {
@@ -1889,6 +1889,1491 @@
           "updatedAt": "2026-11-02"
         }
       }
+    },
+    "8801007908861": {
+      "barcode": "8801007908861",
+      "name": "CJ)맛밤60G*4번들",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007908861.jpg",
+      "stores": {
+        "GS25": {
+          "price": 14500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 7,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 14500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 7,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 14500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 7,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 14500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 7,250원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801007022635": {
+      "barcode": "8801007022635",
+      "name": "CJ)맛밤80g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007022635.JPG",
+      "stores": {
+        "GS25": {
+          "price": 3900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,600원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 3900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,600원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 3900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,600원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 3900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,600원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392194924": {
+      "barcode": "8801392194924",
+      "name": "CJ)맛밤라떼350ml",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392194924.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392158353": {
+      "barcode": "8801392158353",
+      "name": "CJ)맛콩 검은콩 50G",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392158353.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392158278": {
+      "barcode": "8801392158278",
+      "name": "CJ)맛콩 병아리콩 50G",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392158278.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392090516": {
+      "barcode": "8801392090516",
+      "name": "CJ)맥스봉고소한치즈후랑크65g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392090516.JPG",
+      "stores": {
+        "GS25": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801007618807": {
+      "barcode": "8801007618807",
+      "name": "CJ)맥스봉구운마늘후랑크80g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007618807.JPG",
+      "stores": {
+        "GS25": {
+          "price": 2700,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,350원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2700,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,350원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2700,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,350원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2700,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,350원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801007899947": {
+      "barcode": "8801007899947",
+      "name": "CJ)맥스봉꼬치바청양70g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007899947.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392090530": {
+      "barcode": "8801392090530",
+      "name": "CJ)맥스봉매콤불고기핫바",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392090530.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,250원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801007403793": {
+      "barcode": "8801007403793",
+      "name": "CJ)맥스봉빅소시지150g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007403793.png",
+      "stores": {
+        "GS25": {
+          "price": 4100,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,050원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 4100,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,050원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 4100,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,050원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 4100,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,050원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801007403571": {
+      "barcode": "8801007403571",
+      "name": "CJ)맥스봉숯불맛핫바90g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007403571.png",
+      "stores": {
+        "GS25": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392059636": {
+      "barcode": "8801392059636",
+      "name": "CJ)맥스봉오리지널25g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392059636.jpg",
+      "stores": {
+        "GS25": {
+          "price": 1300,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 650원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 1300,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 650원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 1300,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 650원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 1300,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 650원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801007849126": {
+      "barcode": "8801007849126",
+      "name": "CJ)맥스봉오리지널50g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007849126.JPG",
+      "stores": {
+        "GS25": {
+          "price": 2200,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,467원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2200,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,467원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2200,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,467원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2200,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,467원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392060632": {
+      "barcode": "8801392060632",
+      "name": "CJ)맥스봉오리지널70g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392060632.JPG",
+      "stores": {
+        "GS25": {
+          "price": 2600,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,300원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2600,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,300원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2600,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,300원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2600,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,300원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801007899923": {
+      "barcode": "8801007899923",
+      "name": "CJ)맥스봉직화구이꼬치바70g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007899923.JPG",
+      "stores": {
+        "GS25": {
+          "price": 1900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 1900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 1900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 1900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 950원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801007348308": {
+      "barcode": "8801007348308",
+      "name": "CJ)맥스봉청양고추후랑크80g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007348308.JPG",
+      "stores": {
+        "GS25": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801007021652": {
+      "barcode": "8801007021652",
+      "name": "CJ)맥스봉치즈50g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007021652.JPG",
+      "stores": {
+        "GS25": {
+          "price": 2200,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,467원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2200,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,467원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2200,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,467원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2200,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,467원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801007358499": {
+      "barcode": "8801007358499",
+      "name": "CJ)맥스봉치즈70g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007358499.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2800,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,867원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2800,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,867원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2800,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,867원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2800,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,867원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392109782": {
+      "barcode": "8801392109782",
+      "name": "CJ)맥스봉풍미후랑크65g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392109782.png",
+      "stores": {
+        "GS25": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392191381": {
+      "barcode": "8801392191381",
+      "name": "CJ)맥플랜데일리프로틴아몬드350ml",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392191381.JPG",
+      "stores": {
+        "GS25": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392191343": {
+      "barcode": "8801392191343",
+      "name": "CJ)맥플랜데일리프로틴초코350ml",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392191343.JPG",
+      "stores": {
+        "GS25": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392191428": {
+      "barcode": "8801392191428",
+      "name": "CJ)맥플랜데일리프로틴흑임자350ml",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392191428.JPG",
+      "stores": {
+        "GS25": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392175022": {
+      "barcode": "8801392175022",
+      "name": "CJ)멀티비타민&amp;미네랄구미",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392175022.JPG",
+      "stores": {
+        "GS25": {
+          "price": 3900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 3900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 3900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 3900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,950원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801007069883": {
+      "barcode": "8801007069883",
+      "name": "CJ)모닝두부오리엔탈150g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007069883_1.png",
+      "stores": {
+        "GS25": {
+          "price": 2000,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,333원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2000,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,333원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2000,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,333원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2000,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,333원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392186622": {
+      "barcode": "8801392186622",
+      "name": "CJ)미니렌틸콩현미밥110g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392186622.JPG",
+      "stores": {
+        "GS25": {
+          "price": 2600,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,300원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2600,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,300원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2600,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,300원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2600,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,300원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392186608": {
+      "barcode": "8801392186608",
+      "name": "CJ)미니파로통곡물밥110g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392186608.JPG",
+      "stores": {
+        "GS25": {
+          "price": 2600,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,300원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2600,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,300원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2600,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,300원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2600,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,300원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392121357": {
+      "barcode": "8801392121357",
+      "name": "CJ)밀국물떡볶이컵330g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392121357.JPG",
+      "stores": {
+        "GS25": {
+          "price": 3900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,600원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 3900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,600원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 3900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,600원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 3900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,600원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392158940": {
+      "barcode": "8801392158940",
+      "name": "CJ)바삭팝콘스팸맛55g(12)",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392158940.JPG",
+      "stores": {
+        "GS25": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392158964": {
+      "barcode": "8801392158964",
+      "name": "CJ)바삭팝콘허브솔트맛55g(12)",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392158964.JPG",
+      "stores": {
+        "GS25": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801007822921": {
+      "barcode": "8801007822921",
+      "name": "CJ)반모두부300g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007822921.JPG",
+      "stores": {
+        "GS25": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392107542": {
+      "barcode": "8801392107542",
+      "name": "CJ)백설멸치육수1분링(10입)new",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392107542.JPG",
+      "stores": {
+        "GS25": {
+          "price": 4900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 4900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 4900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 4900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392107566": {
+      "barcode": "8801392107566",
+      "name": "CJ)백설사골육수1분링(10입)new",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392107566.JPG",
+      "stores": {
+        "GS25": {
+          "price": 4900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 4900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 4900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 4900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801007034980": {
+      "barcode": "8801007034980",
+      "name": "CJ)백설햄숯불갈비후랑크120g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007034980.JPG",
+      "stores": {
+        "GS25": {
+          "price": 4000,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,000원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 4000,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,000원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 4000,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,000원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 4000,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,000원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392154379": {
+      "barcode": "8801392154379",
+      "name": "CJ)밸런스밀바말차초코",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392154379.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392154393": {
+      "barcode": "8801392154393",
+      "name": "CJ)밸런스밀바피넛버터",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392154393.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392154577": {
+      "barcode": "8801392154577",
+      "name": "CJ)밸런스밀쉐이크견과",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392154577.jpg",
+      "stores": {
+        "GS25": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392154553": {
+      "barcode": "8801392154553",
+      "name": "CJ)밸런스밀쉐이크귀리",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392154553.jpg",
+      "stores": {
+        "GS25": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392154591": {
+      "barcode": "8801392154591",
+      "name": "CJ)밸런스밀쉐이크카카오",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392154591.jpg",
+      "stores": {
+        "GS25": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801007712079": {
+      "barcode": "8801007712079",
+      "name": "CJ)비비고갈비탕400G",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007712079.JPG",
+      "stores": {
+        "GS25": {
+          "price": 11900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 5,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 11900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 5,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 11900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 5,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 11900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 5,950원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392011887": {
+      "barcode": "8801392011887",
+      "name": "CJ)비비고고기왕교자315g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392011887.png",
+      "stores": {
+        "GS25": {
+          "price": 7800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 3,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 7800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 3,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 7800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 3,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 7800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 3,900원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392011528": {
+      "barcode": "8801392011528",
+      "name": "CJ)비비고군만두315g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392011528.jpg",
+      "stores": {
+        "GS25": {
+          "price": 8200,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 4,100원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 8200,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 4,100원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 8200,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 4,100원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 8200,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 4,100원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801007636009": {
+      "barcode": "8801007636009",
+      "name": "CJ)비비고김치볶음150g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007636009.png",
+      "stores": {
+        "GS25": {
+          "price": 3200,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,133원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 3200,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,133원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 3200,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,133원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 3200,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,133원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392011962": {
+      "barcode": "8801392011962",
+      "name": "CJ)비비고김치왕교자315g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392011962.JPG",
+      "stores": {
+        "GS25": {
+          "price": 7800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 3,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 7800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 3,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 7800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 3,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 7800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 3,900원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801392155307": {
+      "barcode": "8801392155307",
+      "name": "CJ)비비고김치팝콘80g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392155307.jpg",
+      "stores": {
+        "GS25": {
+          "price": 1900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 1900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 1900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 1900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 950원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "8801007556376": {
+      "barcode": "8801007556376",
+      "name": "CJ)비비고닭곰탕500g",
+      "brand": "GS25 행사상품",
+      "category": "편의점 행사상품",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007556376.jpg",
+      "stores": {
+        "GS25": {
+          "price": 8500,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 5,667원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 8500,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 5,667원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 8500,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 5,667원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 8500,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 5,667원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
     }
   },
   "byName": {
@@ -2540,8 +4025,8 @@
         }
       }
     },
-    "poppinmiji": {
-      "name": "poppinmiji",
+    "86w4uf2": {
+      "name": "86w4uf2",
       "stores": {
         "GS25": {
           "price": 0,
@@ -4773,6 +6258,2342 @@
           "price": 2900,
           "promoType": "1+1",
           "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맛밤60G4번들": {
+      "name": "CJ)맛밤60G*4번들",
+      "barcode": "8801007908861",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007908861.jpg",
+      "stores": {
+        "GS25": {
+          "price": 14500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 7,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 14500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 7,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 14500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 7,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 14500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 7,250원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맛밤60g4입": {
+      "name": "CJ)맛밤60g*4입",
+      "barcode": "8801007908861",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007908861.JPG",
+      "stores": {
+        "GS25": {
+          "price": 14500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 7,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 14500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 7,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 14500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 7,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 14500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 7,250원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맛밤80g": {
+      "name": "CJ)맛밤80g",
+      "barcode": "8801007022635",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007022635.JPG",
+      "stores": {
+        "GS25": {
+          "price": 3900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,600원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 3900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,600원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 3900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,600원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 3900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,600원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맛밤라떼350ml": {
+      "name": "CJ)맛밤라떼350ml",
+      "barcode": "8801392194924",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392194924.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맛밤프로틴밤맛250mL": {
+      "name": "CJ)맛밤프로틴밤맛250mL",
+      "imageUrl": "http://www.7-eleven.co.kr/front/img/product/product_list_01.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맛콩검은콩50G": {
+      "name": "CJ)맛콩 검은콩 50G",
+      "barcode": "8801392158353",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392158353.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맛콩병아리콩50G": {
+      "name": "CJ)맛콩 병아리콩 50G",
+      "barcode": "8801392158278",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392158278.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맛콩검은콩50g": {
+      "name": "CJ)맛콩검은콩50g",
+      "barcode": "8801392158353",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392158353.JPG",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맛콩병아리콩50g": {
+      "name": "CJ)맛콩병아리콩50g",
+      "barcode": "8801392158278",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392158278.JPG",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉고소한치즈후랑크65g": {
+      "name": "CJ)맥스봉고소한치즈후랑크65g",
+      "barcode": "8801392090516",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392090516.JPG",
+      "stores": {
+        "GS25": {
+          "price": 2500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,250원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉구운마늘후랑크80g": {
+      "name": "CJ)맥스봉구운마늘후랑크80g",
+      "barcode": "8801007618807",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007618807.JPG",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉구운풍미마늘후랑크80g": {
+      "name": "CJ)맥스봉구운풍미마늘후랑크80g",
+      "imageUrl": "http://www.7-eleven.co.kr/upload/product/8801007/618807.1.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉꼬치바청양70g": {
+      "name": "CJ)맥스봉꼬치바청양70g",
+      "barcode": "8801007899947",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007899947.jpg",
+      "stores": {
+        "GS25": {
+          "price": 1900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 1900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 1900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 1900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 950원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉마늘후랑크바80g": {
+      "name": "CJ)맥스봉마늘후랑크바80g",
+      "barcode": "8801007618807",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007618807.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2700,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,350원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2700,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,350원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2700,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,350원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2700,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,350원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉매콤불고기맛핫바65g": {
+      "name": "CJ)맥스봉매콤불고기맛핫바65g",
+      "imageUrl": "http://www.7-eleven.co.kr/front/img/product/product_list_01.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,250원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉매콤불고기핫바": {
+      "name": "CJ)맥스봉매콤불고기핫바",
+      "barcode": "8801392090530",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392090530.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉매콤불고기핫바65g": {
+      "name": "CJ)맥스봉매콤불고기핫바65g",
+      "barcode": "8801392090530",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392090530.JPG",
+      "stores": {
+        "GS25": {
+          "price": 2500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,250원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉빅소시지150g": {
+      "name": "CJ)맥스봉빅소시지150g",
+      "barcode": "8801007403793",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007403793.png",
+      "stores": {
+        "GS25": {
+          "price": 4100,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,050원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 4100,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,050원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 4100,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,050원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 4100,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,050원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉숯불구이맛핫바90g": {
+      "name": "CJ)맥스봉숯불구이맛핫바90g",
+      "imageUrl": "http://www.7-eleven.co.kr/upload/product/8801007/403571.1.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉숯불맛핫바90g": {
+      "name": "CJ)맥스봉숯불맛핫바90g",
+      "barcode": "8801007403571",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007403571.png",
+      "stores": {
+        "GS25": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉오리지널25g": {
+      "name": "CJ)맥스봉오리지널25g",
+      "barcode": "8801392059636",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392059636.jpg",
+      "stores": {
+        "GS25": {
+          "price": 1300,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 650원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 1300,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 650원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 1300,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 650원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 1300,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 650원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉오리지널50g": {
+      "name": "CJ)맥스봉오리지널50g",
+      "imageUrl": "http://www.7-eleven.co.kr/upload/product/8801007/849126.1.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2200,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,467원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2200,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,467원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2200,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,467원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2200,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,467원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉오리지널70g": {
+      "name": "CJ)맥스봉오리지널70g",
+      "barcode": "8801392060632",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392060632.JPG",
+      "stores": {
+        "GS25": {
+          "price": 2800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,400원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,400원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,400원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,400원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉직화구이꼬치바70g": {
+      "name": "CJ)맥스봉직화구이꼬치바70g",
+      "barcode": "8801007899923",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007899923.JPG",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉직화구이꼬치바90g": {
+      "name": "CJ)맥스봉직화구이꼬치바90g",
+      "imageUrl": "http://www.7-eleven.co.kr/upload/product/8801007/835396.1.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉직화구이꼬치바청양고추70g": {
+      "name": "CJ)맥스봉직화구이꼬치바청양고추70g",
+      "barcode": "8801007899947",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007899947.JPG",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉직화꼬치바70g": {
+      "name": "CJ)맥스봉직화꼬치바70g",
+      "barcode": "8801007899923",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007899923.jpg",
+      "stores": {
+        "GS25": {
+          "price": 1900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 1900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 1900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 1900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 950원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉직화청양꼬치바90g": {
+      "name": "CJ)맥스봉직화청양꼬치바90g",
+      "imageUrl": "http://www.7-eleven.co.kr/upload/product/8801007/880303.1.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉진한풍미후랑크65g": {
+      "name": "CJ)맥스봉진한풍미후랑크65g",
+      "imageUrl": "http://www.7-eleven.co.kr/front/img/product/product_list_01.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,250원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉청양고추후랑크80g": {
+      "name": "CJ)맥스봉청양고추후랑크80g",
+      "barcode": "8801007348308",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007348308.JPG",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,933원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉청양후랑크바80g": {
+      "name": "CJ)맥스봉청양후랑크바80g",
+      "barcode": "8801007348308",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007348308.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2700,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,800원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉치즈50g": {
+      "name": "CJ)맥스봉치즈50g",
+      "barcode": "8801007021652",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007021652.JPG",
+      "stores": {
+        "GS25": {
+          "price": 2400,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,600원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2400,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,600원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2400,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,600원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2400,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,600원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉치즈70g": {
+      "name": "CJ)맥스봉치즈70g",
+      "barcode": "8801007358499",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007358499.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2800,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,867원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2800,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,867원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2800,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,867원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2800,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,867원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉치즈후랑크65g": {
+      "name": "CJ)맥스봉치즈후랑크65g",
+      "barcode": "8801392090516",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392090516.png",
+      "stores": {
+        "GS25": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스봉풍미후랑크65g": {
+      "name": "CJ)맥스봉풍미후랑크65g",
+      "barcode": "8801392109782",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392109782.png",
+      "stores": {
+        "GS25": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥스셋레몬비타120ml": {
+      "name": "CJ)맥스셋레몬비타120ml",
+      "imageUrl": "http://www.7-eleven.co.kr/front/img/product/product_list_01.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2400,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,200원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥플랜데일리프로틴아몬드350ml": {
+      "name": "CJ)맥플랜데일리프로틴아몬드350ml",
+      "barcode": "8801392191381",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392191381.JPG",
+      "stores": {
+        "GS25": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥플랜데일리프로틴초코350ml": {
+      "name": "CJ)맥플랜데일리프로틴초코350ml",
+      "barcode": "8801392191343",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392191343.JPG",
+      "stores": {
+        "GS25": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ맥플랜데일리프로틴흑임자350ml": {
+      "name": "CJ)맥플랜데일리프로틴흑임자350ml",
+      "barcode": "8801392191428",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392191428.JPG",
+      "stores": {
+        "GS25": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 3800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,900원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ멀티비타민amp미네랄구미": {
+      "name": "CJ)멀티비타민&amp;미네랄구미",
+      "barcode": "8801392175022",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392175022.JPG",
+      "stores": {
+        "GS25": {
+          "price": 3900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 3900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 3900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 3900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,950원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ모닝두부오리엔탈150g": {
+      "name": "CJ)모닝두부오리엔탈150g",
+      "barcode": "8801007069883",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007069883_1.png",
+      "stores": {
+        "GS25": {
+          "price": 2000,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,333원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2000,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,333원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2000,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,333원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2000,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,333원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ미니렌틸콩현미밥110g": {
+      "name": "CJ)미니렌틸콩현미밥110g",
+      "barcode": "8801392186622",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392186622.JPG",
+      "stores": {
+        "GS25": {
+          "price": 2600,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,300원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2600,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,300원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2600,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,300원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2600,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,300원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ미니파로통곡물밥110g": {
+      "name": "CJ)미니파로통곡물밥110g",
+      "barcode": "8801392186608",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392186608.JPG",
+      "stores": {
+        "GS25": {
+          "price": 2600,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,300원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2600,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,300원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2600,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,300원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2600,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,300원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ밀국물떡볶이컵330g": {
+      "name": "CJ)밀국물떡볶이컵330g",
+      "barcode": "8801392121357",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392121357.JPG",
+      "stores": {
+        "GS25": {
+          "price": 3900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,600원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 3900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,600원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 3900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,600원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 3900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,600원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ바삭팝콘스팸맛55g12": {
+      "name": "CJ)바삭팝콘스팸맛55g(12)",
+      "barcode": "8801392158940",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392158940.JPG",
+      "stores": {
+        "GS25": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ바삭팝콘허브솔트맛55g12": {
+      "name": "CJ)바삭팝콘허브솔트맛55g(12)",
+      "barcode": "8801392158964",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392158964.JPG",
+      "stores": {
+        "GS25": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ반모두부300g": {
+      "name": "CJ)반모두부300g",
+      "barcode": "8801007822921",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007822921.JPG",
+      "stores": {
+        "GS25": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 1900,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 1,267원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ백설멸치육수1분링": {
+      "name": "CJ)백설멸치육수1분링",
+      "imageUrl": "http://www.7-eleven.co.kr/upload/product/8801392/061622.1.jpg",
+      "stores": {
+        "GS25": {
+          "price": 8900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 4,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 8900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 4,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 8900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 4,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 8900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 4,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ백설멸치육수1분링10입new": {
+      "name": "CJ)백설멸치육수1분링(10입)new",
+      "barcode": "8801392107542",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392107542.JPG",
+      "stores": {
+        "GS25": {
+          "price": 4900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 4900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 4900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 4900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ백설사골육수1분링": {
+      "name": "CJ)백설사골육수1분링",
+      "imageUrl": "http://www.7-eleven.co.kr/upload/product/8801392/061646.1.jpg",
+      "stores": {
+        "GS25": {
+          "price": 8900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 4,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 8900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 4,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 8900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 4,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 8900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 4,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ백설사골육수1분링10입new": {
+      "name": "CJ)백설사골육수1분링(10입)new",
+      "barcode": "8801392107566",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392107566.JPG",
+      "stores": {
+        "GS25": {
+          "price": 4900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 4900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 4900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 4900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ백설햄숯불갈비후랑크120g": {
+      "name": "CJ)백설햄숯불갈비후랑크120g",
+      "barcode": "8801007034980",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007034980.JPG",
+      "stores": {
+        "GS25": {
+          "price": 4000,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,000원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 4000,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,000원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 4000,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,000원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 4000,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,000원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ밸런스밀바말차초코": {
+      "name": "CJ)밸런스밀바말차초코",
+      "barcode": "8801392154379",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392154379.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ밸런스밀바피넛버터": {
+      "name": "CJ)밸런스밀바피넛버터",
+      "barcode": "8801392154393",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392154393.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ밸런스밀쉐이크견과": {
+      "name": "CJ)밸런스밀쉐이크견과",
+      "barcode": "8801392154577",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392154577.jpg",
+      "stores": {
+        "GS25": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ밸런스밀쉐이크견과45g": {
+      "name": "CJ)밸런스밀쉐이크견과45g",
+      "barcode": "8801392154577",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392154577.JPG",
+      "stores": {
+        "GS25": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ밸런스밀쉐이크귀리": {
+      "name": "CJ)밸런스밀쉐이크귀리",
+      "barcode": "8801392154553",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392154553.jpg",
+      "stores": {
+        "GS25": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ밸런스밀쉐이크귀리45g": {
+      "name": "CJ)밸런스밀쉐이크귀리45g",
+      "barcode": "8801392154553",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392154553.JPG",
+      "stores": {
+        "GS25": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ밸런스밀쉐이크카카오": {
+      "name": "CJ)밸런스밀쉐이크카카오",
+      "barcode": "8801392154591",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392154591.jpg",
+      "stores": {
+        "GS25": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ밸런스밀쉐이크카카오45g": {
+      "name": "CJ)밸런스밀쉐이크카카오45g",
+      "barcode": "8801392154591",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392154591.JPG",
+      "stores": {
+        "GS25": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 4500,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,250원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ밸런스밀프로틴바말차초코38g": {
+      "name": "CJ)밸런스밀프로틴바(말차초코)38g",
+      "imageUrl": "http://www.7-eleven.co.kr/front/img/product/product_list_01.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ밸런스밀프로틴바피넛버터34g": {
+      "name": "CJ)밸런스밀프로틴바(피넛버터)34g",
+      "imageUrl": "http://www.7-eleven.co.kr/front/img/product/product_list_01.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ버터장조림비빔밥컵반": {
+      "name": "CJ)버터장조림비빔밥(컵반)",
+      "imageUrl": "http://www.7-eleven.co.kr/upload/product/8801007/732466.1.jpg",
+      "stores": {
+        "GS25": {
+          "price": 4800,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 3,200원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 4800,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 3,200원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 4800,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 3,200원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 4800,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 3,200원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ부대찌개1분링": {
+      "name": "CJ)부대찌개1분링",
+      "imageUrl": "http://www.7-eleven.co.kr/front/img/product/product_list_01.jpg",
+      "stores": {
+        "GS25": {
+          "price": 7900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 3,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 7900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 3,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 7900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 3,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 7900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 3,950원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ부침두부380g": {
+      "name": "CJ)부침두부380g",
+      "imageUrl": "http://www.7-eleven.co.kr/front/img/product/product_list_01.jpg",
+      "stores": {
+        "GS25": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 2900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 1,450원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ비비고갈비탕400G": {
+      "name": "CJ)비비고갈비탕400G",
+      "barcode": "8801007712079",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801007712079.JPG",
+      "stores": {
+        "GS25": {
+          "price": 11900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 5,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 11900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 5,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 11900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 5,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 11900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 5,950원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ비비고갈비탕400g": {
+      "name": "CJ)비비고갈비탕400g",
+      "imageUrl": "http://www.7-eleven.co.kr/upload/product/8801007/712079.1.jpg",
+      "stores": {
+        "GS25": {
+          "price": 11900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 5,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 11900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 5,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 11900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 5,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 11900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 5,950원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ비비고고기왕교자315g": {
+      "name": "CJ)비비고고기왕교자315g",
+      "barcode": "8801392011887",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392011887.png",
+      "stores": {
+        "GS25": {
+          "price": 7800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 3,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 7800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 3,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 7800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 3,900원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 7800,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 3,900원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ비비고군만두315g": {
+      "name": "CJ)비비고군만두315g",
+      "barcode": "8801392011528",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392011528.jpg",
+      "stores": {
+        "GS25": {
+          "price": 8200,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 4,100원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 8200,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 4,100원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 8200,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 4,100원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 8200,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 4,100원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ비비고김치볶음150g": {
+      "name": "CJ)비비고김치볶음150g",
+      "barcode": "8801007636009",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007636009.png",
+      "stores": {
+        "GS25": {
+          "price": 3200,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,133원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 3200,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,133원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 3200,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,133원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 3200,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 2,133원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ비비고김치왕교자315g": {
+      "name": "CJ)비비고김치왕교자315g",
+      "barcode": "8801392011962",
+      "imageUrl": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801392011962.JPG",
+      "stores": {
+        "GS25": {
+          "price": 8200,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 4,100원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 8200,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 4,100원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 8200,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 4,100원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 8200,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 4,100원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ비비고김치팝콘80g": {
+      "name": "CJ)비비고김치팝콘80g",
+      "barcode": "8801392155307",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801392155307.jpg",
+      "stores": {
+        "GS25": {
+          "price": 1900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 1900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 1900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 1900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 950원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ비비고남도식추어탕460g": {
+      "name": "CJ)비비고남도식추어탕460g",
+      "imageUrl": "http://www.7-eleven.co.kr/front/img/product/product_list_01.jpg",
+      "stores": {
+        "GS25": {
+          "price": 11900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 5,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 11900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 5,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 11900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 5,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 11900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 5,950원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ비비고닭가슴살김치만두168g": {
+      "name": "CJ)비비고닭가슴살김치만두168g",
+      "imageUrl": "http://www.7-eleven.co.kr/front/img/product/product_list_01.jpg",
+      "stores": {
+        "GS25": {
+          "price": 5900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 5900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 5900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 5900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,950원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ비비고닭가슴살만두168g": {
+      "name": "CJ)비비고닭가슴살만두168g",
+      "imageUrl": "http://www.7-eleven.co.kr/front/img/product/product_list_01.jpg",
+      "stores": {
+        "GS25": {
+          "price": 5900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 5900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 5900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,950원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 5900,
+          "promoType": "1+1",
+          "promoLabel": "1+1 행사 (개당 2,950원)",
+          "updatedAt": "2026-11-02"
+        }
+      }
+    },
+    "CJ비비고닭곰탕500g": {
+      "name": "CJ)비비고닭곰탕500g",
+      "barcode": "8801007556376",
+      "imageUrl": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801007556376.jpg",
+      "stores": {
+        "GS25": {
+          "price": 8500,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 5,667원)",
+          "updatedAt": "2026-11-02"
+        },
+        "CU": {
+          "price": 8500,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 5,667원)",
+          "updatedAt": "2026-11-02"
+        },
+        "SEVEN": {
+          "price": 8500,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 5,667원)",
+          "updatedAt": "2026-11-02"
+        },
+        "EMART24": {
+          "price": 8500,
+          "promoType": "2+1",
+          "promoLabel": "2+1 행사 (개당 5,667원)",
           "updatedAt": "2026-11-02"
         }
       }

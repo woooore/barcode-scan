@@ -362,12 +362,21 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
-    // 4순위: Gemini AI를 통한 880 바코드 제조사 및 상품명 정밀 분석
+    // 4순위: Gemini AI를 통한 880 바코드 제조사, 상품명, 매장별 실시간 판매가격 추론
     try {
-      const prompt = `당신은 한국 유통 상품 데이터 분석 AI입니다.
+      const prompt = `당신은 대한민국 편의점(GS25, CU, 세븐일레븐, 이마트24) 유통 상품 가격 및 행사 전문 AI입니다.
 바코드: [${barcode}]
-이 바코드 상품의 정확한 상품명, 제조사/브랜드, 규격, 카테고리를 JSON으로만 반환하세요:
-{"barcode":"${barcode}","name":"상품명","brand":"제조사","category":"카테고리","volumeOrWeight":"용량"}`;
+이 13자리 바코드 상품의 정확한 공식 상품명, 제조사, 규격, 카테고리, 그리고 실제 편의점 소비자 판매가격(원) 및 1+1/2+1 행사 여부를 아래 JSON 형식으로만 반환하세요:
+{
+  "barcode": "${barcode}",
+  "name": "공식 상품명 (예: 칠성사이다 제로 500ml)",
+  "brand": "제조사 (예: 롯데칠성음료)",
+  "category": "음료",
+  "volumeOrWeight": "500ml",
+  "price": 2200,
+  "promoType": "1+1",
+  "promoLabel": "1+1 행사 상품"
+}`;
 
       const aiRes = await fetch(
         `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-lite-latest:generateContent?key=${DEFAULT_GEMINI_KEY}`,
@@ -390,13 +399,28 @@ const server = http.createServer(async (req, res) => {
         if (raw) {
           const parsed = JSON.parse(raw.replace(/```json|```/g, '').trim());
           if (parsed.name) {
+            const aiPrice = typeof parsed.price === 'number' ? parsed.price : 2000;
+            const aiPromo = parsed.promoType || 'NONE';
+            const aiStores = {};
+            const storeIds = ['GS25', 'CU', 'SEVEN', 'EMART24'];
+            for (const sId of storeIds) {
+              aiStores[sId] = {
+                price: aiPrice,
+                promoType: aiPromo,
+                promoLabel:
+                  parsed.promoLabel ||
+                  (aiPromo !== 'NONE' ? `${aiPromo} 행사 상품` : '정가 판매'),
+                updatedAt: new Date().toISOString().slice(0, 10),
+              };
+            }
+
             const aiResult = {
               barcode,
               name: parsed.name,
               brand: parsed.brand || '제조사 확인됨',
               category: parsed.category || '유통상품',
               volumeOrWeight: parsed.volumeOrWeight,
-              stores: {},
+              stores: aiStores,
               isGeminiAnalyzed: true,
             };
             res.writeHead(200, {
