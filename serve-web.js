@@ -13,6 +13,25 @@ const DIST = path.join(__dirname, 'dist');
 const CUSTOM_DB_FILE = path.join(__dirname, 'server', 'custom_prices_db.json');
 const EVENTS_DB_FILE = path.join(__dirname, 'server', 'convenience_events_db.json');
 
+function loadEnv() {
+  const envFile = path.join(__dirname, '.env');
+  if (fs.existsSync(envFile)) {
+    const lines = fs.readFileSync(envFile, 'utf-8').split('\n');
+    for (const line of lines) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith('#')) continue;
+      const idx = trimmed.indexOf('=');
+      if (idx > 0) {
+        const k = trimmed.slice(0, idx).trim();
+        const v = trimmed.slice(idx + 1).trim();
+        process.env[k] = v;
+      }
+    }
+  }
+}
+loadEnv();
+const DEFAULT_GEMINI_KEY = process.env.GEMINI_API_KEY || '';
+
 function loadCustomDb() {
   try {
     if (fs.existsSync(CUSTOM_DB_FILE)) {
@@ -121,7 +140,169 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  // GET /api/products/:barcode
+  // GET /api/config (Gemini AI 키 및 시스템 설정 반환)
+  if (req.method === 'GET' && url.pathname === '/api/config') {
+    res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+    res.end(
+      JSON.stringify({
+        hasGeminiKey: Boolean(DEFAULT_GEMINI_KEY),
+        geminiKey: DEFAULT_GEMINI_KEY,
+      })
+    );
+    return;
+  }
+
+  // POST /api/gemini/analyze (바코드 번호로 Gemini AI 질의 프록시)
+  if (req.method === 'POST' && url.pathname === '/api/gemini/analyze') {
+    let body = '';
+    req.on('data', (c) => (body += c));
+    req.on('end', async () => {
+      try {
+        const { barcode, storeId, apiKey } = JSON.parse(body || '{}');
+        const effectiveKey = (apiKey && apiKey.trim()) || DEFAULT_GEMINI_KEY;
+        if (!effectiveKey || !barcode) {
+          res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
+          res.end(JSON.stringify({ error: '바코드 또는 API 키가 누락되었습니다.' }));
+          return;
+        }
+
+        const prompt = `당신은 한국 편의점(GS25, CU, 세븐일레븐, 이마트24) 및 대형마트 유통 상품 전문 데이터 분석 AI입니다.
+바코드 번호: [${barcode}]
+선택된 매장: [${storeId || 'GS25'}]
+
+이 13자리 바코드(880...) 상품의 정확한 상품명, 제조사/브랜드, 규격/용량, 카테고리, 그리고 ${storeId || 'GS25'} 편의점 기준 단품 판매 가격(원) 및 1+1 / 2+1 행사 여부를 추론하여 오직 순수 JSON으로만 답변하세요:
+{
+  "barcode": "${barcode}",
+  "name": "상품명",
+  "brand": "제조사/브랜드",
+  "category": "카테고리",
+  "volumeOrWeight": "용량",
+  "price": 2000,
+  "promoType": "NONE",
+  "promoLabel": "정가 판매",
+  "confidence": "high"
+}`;
+
+        const models = ['gemini-flash-lite-latest', 'gemini-flash-latest', 'gemini-2.5-flash-lite', 'gemini-3.8-flash'];
+        let answered = false;
+
+        for (const m of models) {
+          try {
+            const apiRes = await fetch(
+              `https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent?key=${effectiveKey}`,
+              {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  contents: [{ parts: [{ text: prompt }] }],
+                  generationConfig: { responseMimeType: 'application/json', temperature: 0.1 },
+                }),
+              }
+            );
+            if (apiRes.ok) {
+              const d = await apiRes.json();
+              const txt = d?.candidates?.[0]?.content?.parts?.[0]?.text;
+              if (txt) {
+                const parsed = JSON.parse(txt.replace(/```json|```/g, '').trim());
+                res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+                res.end(JSON.stringify(parsed));
+                answered = true;
+                break;
+              }
+            }
+          } catch (e) {}
+        }
+
+        if (!answered) {
+          res.writeHead(502, { 'Content-Type': 'application/json; charset=utf-8' });
+          res.end(JSON.stringify({ error: 'Gemini AI 호출에 실패했습니다.' }));
+        }
+      } catch (err) {
+        res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ error: err.message }));
+      }
+    });
+    return;
+  }
+
+  // POST /api/gemini/vision (사진 Base64로 Gemini Vision 판독 프록시)
+  if (req.method === 'POST' && url.pathname === '/api/gemini/vision') {
+    let body = '';
+    req.on('data', (c) => (body += c));
+    req.on('end', async () => {
+      try {
+        const { imageBase64, mimeType, storeId, apiKey } = JSON.parse(body || '{}');
+        const effectiveKey = (apiKey && apiKey.trim()) || DEFAULT_GEMINI_KEY;
+        if (!effectiveKey || !imageBase64) {
+          res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
+          res.end(JSON.stringify({ error: '이미지 데이터 또는 API 키가 누락되었습니다.' }));
+          return;
+        }
+
+        const cleanBase64 = imageBase64.includes(',') ? imageBase64.split(',')[1] : imageBase64;
+        const prompt = `이 사진은 한국 편의점(${storeId || 'GS25'}) 진열대 또는 상품의 사진입니다.
+사진 속 라벨 텍스트, 바코드 번호(숫자 880...), 제품 패키지 디자인을 정밀 판독하세요.
+판독한 상품의 바코드 번호, 상품명, 제조사/브랜드, ${storeId || 'GS25'} 기준 판매 가격(원), 1+1/2+1 행사 여부를 아래 JSON 형식으로만 반환하세요:
+{
+  "barcode": "바코드 번호",
+  "name": "상품명",
+  "brand": "제조사",
+  "category": "카테고리",
+  "volumeOrWeight": "용량",
+  "price": 2000,
+  "promoType": "NONE",
+  "promoLabel": "정가 판매",
+  "confidence": "high"
+}`;
+
+        const models = ['gemini-flash-lite-latest', 'gemini-flash-latest', 'gemini-2.5-flash-lite', 'gemini-3.8-flash'];
+        let answered = false;
+
+        for (const m of models) {
+          try {
+            const apiRes = await fetch(
+              `https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent?key=${effectiveKey}`,
+              {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  contents: [
+                    {
+                      parts: [
+                        { text: prompt },
+                        { inlineData: { mimeType: mimeType || 'image/jpeg', data: cleanBase64 } },
+                      ],
+                    },
+                  ],
+                  generationConfig: { responseMimeType: 'application/json', temperature: 0.1 },
+                }),
+              }
+            );
+            if (apiRes.ok) {
+              const d = await apiRes.json();
+              const txt = d?.candidates?.[0]?.content?.parts?.[0]?.text;
+              if (txt) {
+                const parsed = JSON.parse(txt.replace(/```json|```/g, '').trim());
+                res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+                res.end(JSON.stringify(parsed));
+                answered = true;
+                break;
+              }
+            }
+          } catch (e) {}
+        }
+
+        if (!answered) {
+          res.writeHead(502, { 'Content-Type': 'application/json; charset=utf-8' });
+          res.end(JSON.stringify({ error: 'Gemini Vision AI 분석에 실패했습니다.' }));
+        }
+      } catch (err) {
+        res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ error: err.message }));
+      }
+    });
+    return;
+  }
   if (req.method === 'GET' && url.pathname.startsWith('/api/products/')) {
     const barcode = decodeURIComponent(url.pathname.replace('/api/products/', '').trim());
     const customDb = loadCustomDb();
@@ -172,6 +353,55 @@ const server = http.createServer(async (req, res) => {
       res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
       res.end(JSON.stringify(result));
       return;
+    }
+
+    // 4순위: Gemini AI를 통한 880 바코드 제조사 및 상품명 정밀 분석
+    try {
+      const prompt = `당신은 한국 유통 상품 데이터 분석 AI입니다.
+바코드: [${barcode}]
+이 바코드 상품의 정확한 상품명, 제조사/브랜드, 규격, 카테고리를 JSON으로만 반환하세요:
+{"barcode":"${barcode}","name":"상품명","brand":"제조사","category":"카테고리","volumeOrWeight":"용량"}`;
+
+      const aiRes = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-lite-latest:generateContent?key=${DEFAULT_GEMINI_KEY}`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: [{ parts: [{ text: prompt }] }],
+            generationConfig: {
+              responseMimeType: 'application/json',
+              temperature: 0.1,
+            },
+          }),
+        }
+      );
+
+      if (aiRes.ok) {
+        const aiData = await aiRes.json();
+        const raw = aiData?.candidates?.[0]?.content?.parts?.[0]?.text;
+        if (raw) {
+          const parsed = JSON.parse(raw.replace(/```json|```/g, '').trim());
+          if (parsed.name) {
+            const aiResult = {
+              barcode,
+              name: parsed.name,
+              brand: parsed.brand || '제조사 확인됨',
+              category: parsed.category || '유통상품',
+              volumeOrWeight: parsed.volumeOrWeight,
+              stores: {},
+              isGeminiAnalyzed: true,
+            };
+            res.writeHead(200, {
+              'Content-Type': 'application/json; charset=utf-8',
+            });
+            res.end(JSON.stringify(aiResult));
+            return;
+          }
+        }
+      }
+    } catch (e) {
+      // ignore
     }
 
     res.writeHead(404, { 'Content-Type': 'application/json; charset=utf-8' });

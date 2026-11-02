@@ -10,6 +10,7 @@ import {
   Platform,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { fetchServerConfig } from '../services/geminiService';
 
 export const GEMINI_KEY_STORAGE = '@convenience_gemini_api_key_v1';
 
@@ -25,12 +26,21 @@ export const GeminiApiKeyModal: React.FC<GeminiApiKeyModalProps> = ({
   onKeySaved,
 }) => {
   const [apiKey, setApiKey] = useState('');
+  const [serverHasKey, setServerHasKey] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
 
   useEffect(() => {
     if (visible) {
       AsyncStorage.getItem(GEMINI_KEY_STORAGE).then((k) => {
-        if (k) setApiKey(k);
+        if (k) {
+          setApiKey(k);
+        }
+      });
+      fetchServerConfig().then((cfg) => {
+        setServerHasKey(cfg.hasGeminiKey);
+        if (!apiKey && cfg.geminiKey) {
+          setApiKey(cfg.geminiKey);
+        }
       });
       setIsSaved(false);
     }
@@ -38,8 +48,13 @@ export const GeminiApiKeyModal: React.FC<GeminiApiKeyModalProps> = ({
 
   const handleSave = async () => {
     const cleanKey = apiKey.trim();
-    await AsyncStorage.setItem(GEMINI_KEY_STORAGE, cleanKey);
-    onKeySaved(cleanKey);
+    if (cleanKey) {
+      await AsyncStorage.setItem(GEMINI_KEY_STORAGE, cleanKey);
+      onKeySaved(cleanKey);
+    } else {
+      await AsyncStorage.removeItem(GEMINI_KEY_STORAGE);
+      onKeySaved('');
+    }
     setIsSaved(true);
     setTimeout(() => {
       onClose();
@@ -66,29 +81,37 @@ export const GeminiApiKeyModal: React.FC<GeminiApiKeyModalProps> = ({
             </TouchableOpacity>
           </View>
 
-          <Text style={styles.desc}>
-            Google Gemini AI를 연결하면, 미등록 신상품 바코드 스캔 시{' '}
-            <Text style={{ color: '#30D158', fontWeight: 'bold' }}>
-              상품명·제조사·GS25/CU 판매 가격
+          <View style={styles.statusBadge}>
+            <Text style={styles.statusBadgeText}>
+              {serverHasKey || apiKey
+                ? '✅ Gemini AI 엔진 활성화됨 (미등록 바코드·사진 자동 분석)'
+                : '💡 Gemini API 키를 등록하면 AI 자동 분석이 활성화됩니다'}
             </Text>
-            을 AI가 스스로 추론하여 자동으로 완성해 줍니다!
+          </View>
+
+          <Text style={styles.desc}>
+            Google Gemini AI가 연결되어 미등록 신상품 바코드 스캔 시{' '}
+            <Text style={{ color: '#30D158', fontWeight: 'bold' }}>
+              제조사·상품명·GS25/CU 편의점 판매가격
+            </Text>
+            을 자동으로 완성해 드립니다!
           </Text>
 
           <TouchableOpacity style={styles.linkBanner} onPress={handleOpenAiStudio}>
             <Text style={styles.linkBannerTitle}>
-              👉 Google AI Studio에서 무료 API 키 발급받기
+              👉 본인 전용 Google AI 키 발급받기 (무료)
             </Text>
             <Text style={styles.linkBannerDesc}>
-              (구글 계정만 있으면 10초 만에 무료 발급 · 카드 등록 불필요)
+              (구글 AI Studio에서 무료 발급 · 카드 불필요)
             </Text>
           </TouchableOpacity>
 
-          <Text style={styles.label}>Gemini API 키 (AIzaSy...)</Text>
+          <Text style={styles.label}>Gemini API 키</Text>
           <TextInput
             style={styles.input}
             value={apiKey}
             onChangeText={setApiKey}
-            placeholder="AIzaSy... 로 시작하는 키를 붙여넣으세요"
+            placeholder="AI 키를 입력하거나 서버 기본 키를 사용합니다"
             placeholderTextColor="#636366"
             autoCapitalize="none"
             autoCorrect={false}
@@ -99,7 +122,7 @@ export const GeminiApiKeyModal: React.FC<GeminiApiKeyModalProps> = ({
             onPress={handleSave}
           >
             <Text style={styles.saveBtnText}>
-              {isSaved ? '✅ 저장 완료!' : 'AI 키 저장하고 즉시 활성화'}
+              {isSaved ? '✅ 저장 완료!' : 'AI 키 저장하고 적용'}
             </Text>
           </TouchableOpacity>
 
@@ -112,7 +135,7 @@ export const GeminiApiKeyModal: React.FC<GeminiApiKeyModalProps> = ({
                 onKeySaved('');
               }}
             >
-              <Text style={styles.deleteBtnText}>API 키 삭제</Text>
+              <Text style={styles.deleteBtnText}>사용자 입력 키 초기화</Text>
             </TouchableOpacity>
           ) : null}
         </View>
@@ -150,55 +173,68 @@ const styles = StyleSheet.create({
     fontWeight: '800',
   },
   closeBtn: {
-    backgroundColor: '#2C2C2E',
-    paddingHorizontal: 10,
-    paddingVertical: 5,
-    borderRadius: 10,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
   },
   closeBtnText: {
-    color: '#AEAEB2',
+    color: '#8E8E93',
+    fontSize: 14,
+  },
+  statusBadge: {
+    backgroundColor: 'rgba(48, 209, 88, 0.15)',
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+    borderRadius: 10,
+    marginBottom: 12,
+    borderWidth: 1,
+    borderColor: '#30D158',
+  },
+  statusBadgeText: {
+    color: '#30D158',
     fontSize: 12,
-    fontWeight: '600',
+    fontWeight: '700',
+    textAlign: 'center',
   },
   desc: {
-    color: '#AEAEB2',
+    color: '#C7C7CC',
     fontSize: 13,
-    lineHeight: 19,
+    lineHeight: 18,
     marginBottom: 14,
   },
   linkBanner: {
-    backgroundColor: 'rgba(10, 132, 255, 0.14)',
-    borderWidth: 1,
-    borderColor: '#0A84FF',
-    borderRadius: 12,
+    backgroundColor: '#2C2C2E',
     padding: 12,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: '#3A3A3C',
     marginBottom: 14,
   },
   linkBannerTitle: {
     color: '#0A84FF',
     fontSize: 13,
-    fontWeight: '800',
+    fontWeight: '700',
+    marginBottom: 2,
   },
   linkBannerDesc: {
     color: '#8E8E93',
     fontSize: 11,
-    marginTop: 2,
   },
   label: {
-    color: '#E5E5EA',
+    color: '#8E8E93',
     fontSize: 12,
     fontWeight: '700',
     marginBottom: 6,
   },
   input: {
-    backgroundColor: '#242426',
-    color: '#FFFFFF',
+    backgroundColor: '#141416',
     borderRadius: 12,
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-    fontSize: 13,
     borderWidth: 1,
     borderColor: '#323236',
+    color: '#FFFFFF',
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+    fontSize: 13,
+    fontFamily: Platform.OS === 'ios' ? 'Menlo' : 'monospace',
     marginBottom: 14,
   },
   saveBtn: {
@@ -214,10 +250,12 @@ const styles = StyleSheet.create({
   },
   deleteBtn: {
     marginTop: 10,
+    paddingVertical: 8,
     alignItems: 'center',
   },
   deleteBtnText: {
     color: '#FF453A',
     fontSize: 12,
+    fontWeight: '600',
   },
 });

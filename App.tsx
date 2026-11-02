@@ -38,7 +38,10 @@ import {
   GeminiApiKeyModal,
   GEMINI_KEY_STORAGE,
 } from './src/components/GeminiApiKeyModal';
-import { queryGeminiForBarcode } from './src/services/geminiService';
+import {
+  queryGeminiForBarcode,
+  fetchServerConfig,
+} from './src/services/geminiService';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 type ActiveTab = 'SCAN' | 'CART' | 'CATALOG';
@@ -126,6 +129,7 @@ function MainAppContent() {
 
   // Gemini AI 설정 상태
   const [geminiApiKey, setGeminiApiKey] = useState('');
+  const [geminiReady, setGeminiReady] = useState(true);
   const [geminiModalVisible, setGeminiModalVisible] = useState(false);
   const [aiAnalyzing, setAiAnalyzing] = useState(false);
 
@@ -139,7 +143,15 @@ function MainAppContent() {
       setProducts(loaded);
     });
     AsyncStorage.getItem(GEMINI_KEY_STORAGE).then((k) => {
-      if (k) setGeminiApiKey(k);
+      if (k && k.trim()) {
+        setGeminiApiKey(k.trim());
+      }
+    });
+    fetchServerConfig().then((cfg) => {
+      if (cfg.hasGeminiKey) {
+        setGeminiReady(true);
+        if (cfg.geminiKey) setGeminiApiKey(cfg.geminiKey);
+      }
     });
   }, []);
 
@@ -188,18 +200,14 @@ function MainAppContent() {
         }
       }
 
-      // Gemini AI 키가 연동되어 있다면 자동으로 AI 질의 실행
-      if (geminiApiKey) {
+      // Gemini AI가 준비되어 있다면 자동으로 AI 질의 실행
+      if (geminiApiKey || geminiReady) {
         handleAskGemini(barcode);
       }
     }
   };
 
   const handleAskGemini = async (barcodeToAsk: string) => {
-    if (!geminiApiKey) {
-      setGeminiModalVisible(true);
-      return;
-    }
     setAiAnalyzing(true);
     const ai = await queryGeminiForBarcode({
       barcode: barcodeToAsk,
@@ -373,17 +381,21 @@ function MainAppContent() {
             <TouchableOpacity
               style={[
                 styles.aiHeaderBtn,
-                geminiApiKey ? styles.aiHeaderBtnActive : styles.aiHeaderBtnInactive,
+                (geminiApiKey || geminiReady)
+                  ? styles.aiHeaderBtnActive
+                  : styles.aiHeaderBtnInactive,
               ]}
               onPress={() => setGeminiModalVisible(true)}
             >
               <Text
                 style={[
                   styles.aiHeaderBtnText,
-                  geminiApiKey ? { color: '#30D158' } : { color: '#0A84FF' },
+                  (geminiApiKey || geminiReady)
+                    ? { color: '#30D158' }
+                    : { color: '#0A84FF' },
                 ]}
               >
-                {geminiApiKey ? '🤖 AI 연동됨' : '🤖 AI 연결'}
+                {(geminiApiKey || geminiReady) ? '🤖 AI 연동됨' : '🤖 AI 연결'}
               </Text>
             </TouchableOpacity>
 
@@ -524,7 +536,7 @@ function MainAppContent() {
                     ✨ Gemini AI에게 이 바코드 물어보기 (자동 분석)
                   </Text>
                   <Text style={styles.geminiAskBtnSub}>
-                    {geminiApiKey
+                    {geminiApiKey || geminiReady
                       ? 'AI가 제조사·상품명·편의점 가격을 즉시 찾아 등록합니다'
                       : '구글 Gemini AI 키를 연결하여 1초 만에 자동 분석'}
                   </Text>
