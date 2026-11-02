@@ -34,6 +34,12 @@ import {
 import { BarcodeScannerBox } from './src/components/BarcodeScannerBox';
 import { ProductPriceCard } from './src/components/ProductPriceCard';
 import { PriceRegisterModal } from './src/components/PriceRegisterModal';
+import {
+  GeminiApiKeyModal,
+  GEMINI_KEY_STORAGE,
+} from './src/components/GeminiApiKeyModal';
+import { queryGeminiForBarcode } from './src/services/geminiService';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 type ActiveTab = 'SCAN' | 'CART' | 'CATALOG';
 
@@ -118,6 +124,11 @@ function MainAppContent() {
   const [modalExistingProduct, setModalExistingProduct] =
     useState<ProductItem | null>(null);
 
+  // Gemini AI 설정 상태
+  const [geminiApiKey, setGeminiApiKey] = useState('');
+  const [geminiModalVisible, setGeminiModalVisible] = useState(false);
+  const [aiAnalyzing, setAiAnalyzing] = useState(false);
+
   const selectedStore = useMemo(
     () => STORES.find((s) => s.id === selectedStoreId) || STORES[0],
     [selectedStoreId]
@@ -126,6 +137,9 @@ function MainAppContent() {
   useEffect(() => {
     loadAllProducts().then((loaded) => {
       setProducts(loaded);
+    });
+    AsyncStorage.getItem(GEMINI_KEY_STORAGE).then((k) => {
+      if (k) setGeminiApiKey(k);
     });
   }, []);
 
@@ -170,8 +184,67 @@ function MainAppContent() {
             isUserContributed: false,
           };
           setProducts((prev) => [autoProduct, ...prev.filter((p) => p.barcode !== barcode)]);
+          return;
         }
       }
+
+      // Gemini AI 키가 연동되어 있다면 자동으로 AI 질의 실행
+      if (geminiApiKey) {
+        handleAskGemini(barcode);
+      }
+    }
+  };
+
+  const handleAskGemini = async (barcodeToAsk: string) => {
+    if (!geminiApiKey) {
+      setGeminiModalVisible(true);
+      return;
+    }
+    setAiAnalyzing(true);
+    const ai = await queryGeminiForBarcode({
+      barcode: barcodeToAsk,
+      storeId: selectedStoreId,
+      apiKey: geminiApiKey,
+    });
+    setAiAnalyzing(false);
+
+    if (ai) {
+      const aiProd: ProductItem = {
+        barcode: barcodeToAsk,
+        name: ai.name,
+        brand: ai.brand,
+        category: ai.category,
+        volumeOrWeight: ai.volumeOrWeight,
+        imageEmoji: '🤖',
+        stores: {
+          [selectedStoreId]: {
+            price: ai.price,
+            promoType: ai.promoType,
+            promoLabel:
+              ai.promoLabel ||
+              (ai.promoType !== 'NONE'
+                ? `${ai.promoType} 행사 상품`
+                : '정가 판매'),
+            updatedAt: new Date().toISOString().slice(0, 10),
+          },
+        },
+        isUserContributed: true,
+      };
+      setProducts((prev) => [
+        aiProd,
+        ...prev.filter((p) => p.barcode !== barcodeToAsk),
+      ]);
+      saveOrUpdateProductPrice({
+        barcode: barcodeToAsk,
+        name: ai.name,
+        brand: ai.brand,
+        category: ai.category,
+        volumeOrWeight: ai.volumeOrWeight,
+        imageEmoji: '🤖',
+        storeId: selectedStoreId,
+        priceInfo: aiProd.stores[selectedStoreId]!,
+        currentProducts: products,
+      }).catch(() => {});
     }
   };
 
@@ -296,12 +369,31 @@ function MainAppContent() {
               매장 선택 후 바코드를 찍으면 가격 · 1+1 행사가 바로 나옵니다
             </Text>
           </View>
-          <TouchableOpacity
-            style={styles.newBarcodeBtn}
-            onPress={() => openEditModal(null, '', selectedStoreId)}
-          >
-            <Text style={styles.newBarcodeBtnText}>+ 가격제보</Text>
-          </TouchableOpacity>
+          <View style={{ flexDirection: 'row', gap: 6, alignItems: 'center' }}>
+            <TouchableOpacity
+              style={[
+                styles.aiHeaderBtn,
+                geminiApiKey ? styles.aiHeaderBtnActive : styles.aiHeaderBtnInactive,
+              ]}
+              onPress={() => setGeminiModalVisible(true)}
+            >
+              <Text
+                style={[
+                  styles.aiHeaderBtnText,
+                  geminiApiKey ? { color: '#30D158' } : { color: '#0A84FF' },
+                ]}
+              >
+                {geminiApiKey ? '🤖 AI 연동됨' : '🤖 AI 연결'}
+              </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.newBarcodeBtn}
+              onPress={() => openEditModal(null, '', selectedStoreId)}
+            >
+              <Text style={styles.newBarcodeBtnText}>+ 가격제보</Text>
+            </TouchableOpacity>
+          </View>
         </View>
 
         {/* 편의점 & 대형마트 선택 가로 스크롤 */}
@@ -361,6 +453,15 @@ function MainAppContent() {
               products={products}
               onBarcodeDetected={handleBarcodeDetected}
               lastScannedBarcode={scannedBarcode}
+              geminiApiKey={geminiApiKey}
+              onOpenGeminiModal={() => setGeminiModalVisible(true)}
+              onAiProductFound={(aiProd) => {
+                setProducts((prev) => [
+                  aiProd,
+                  ...prev.filter((p) => p.barcode !== aiProd.barcode),
+                ]);
+                setScannedBarcode(aiProd.barcode);
+              }}
             />
 
             {/* 스캔 결과 카드 */}
@@ -380,7 +481,18 @@ function MainAppContent() {
                 <Text style={styles.unknownTitle}>
                   바코드 [{scannedBarcode}] 상품
                 </Text>
-                {externalLookupLoading ? (
+
+                {aiAnalyzing ? (
+                  <View style={styles.aiLoadingBox}>
+                    <ActivityIndicator size="large" color="#0A84FF" />
+                    <Text style={styles.aiLoadingTitle}>
+                      🤖 Gemini AI가 바코드 정보 및 가격을 분석 중...
+                    </Text>
+                    <Text style={styles.aiLoadingSub}>
+                      바코드 [{scannedBarcode}]의 제조사·상품명·{selectedStore.name} 편의점 정가를 추론하고 있습니다.
+                    </Text>
+                  </View>
+                ) : externalLookupLoading ? (
                   <View style={styles.loadingRow}>
                     <ActivityIndicator color="#0A84FF" />
                     <Text style={styles.loadingText}>
@@ -402,6 +514,22 @@ function MainAppContent() {
                   </Text>
                 )}
 
+                {/* Gemini AI 자동 분석 버튼 */}
+                <TouchableOpacity
+                  style={styles.geminiAskBtn}
+                  onPress={() => handleAskGemini(scannedBarcode)}
+                  disabled={aiAnalyzing}
+                >
+                  <Text style={styles.geminiAskBtnText}>
+                    ✨ Gemini AI에게 이 바코드 물어보기 (자동 분석)
+                  </Text>
+                  <Text style={styles.geminiAskBtnSub}>
+                    {geminiApiKey
+                      ? 'AI가 제조사·상품명·편의점 가격을 즉시 찾아 등록합니다'
+                      : '구글 Gemini AI 키를 연결하여 1초 만에 자동 분석'}
+                  </Text>
+                </TouchableOpacity>
+
                 <TouchableOpacity
                   style={[
                     styles.registerUnknownBtn,
@@ -417,7 +545,7 @@ function MainAppContent() {
                       { color: selectedStore.textColor },
                     ]}
                   >
-                    ➕ 5초 만에 {selectedStore.name} 가격·행사 등록하기
+                    ➕ 직접 {selectedStore.name} 가격·행사 수동 등록하기
                   </Text>
                 </TouchableOpacity>
               </View>
@@ -793,6 +921,13 @@ function MainAppContent() {
         externalSuggestedBrand={externalSuggestion?.brand}
         onSave={handleSavePrice}
       />
+
+      {/* Gemini AI API 키 설정 모달 */}
+      <GeminiApiKeyModal
+        visible={geminiModalVisible}
+        onClose={() => setGeminiModalVisible(false)}
+        onKeySaved={(k) => setGeminiApiKey(k)}
+      />
     </SafeAreaView>
   );
 }
@@ -843,6 +978,24 @@ const styles = StyleSheet.create({
   },
   newBarcodeBtnText: {
     color: '#30D158',
+    fontSize: 12,
+    fontWeight: '800',
+  },
+  aiHeaderBtn: {
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    borderRadius: 12,
+    borderWidth: 1,
+  },
+  aiHeaderBtnActive: {
+    backgroundColor: 'rgba(48, 209, 88, 0.15)',
+    borderColor: '#30D158',
+  },
+  aiHeaderBtnInactive: {
+    backgroundColor: 'rgba(10, 132, 255, 0.15)',
+    borderColor: '#0A84FF',
+  },
+  aiHeaderBtnText: {
     fontSize: 12,
     fontWeight: '800',
   },
@@ -944,6 +1097,48 @@ const styles = StyleSheet.create({
   registerUnknownBtnText: {
     fontSize: 14,
     fontWeight: '800',
+  },
+  aiLoadingBox: {
+    backgroundColor: '#1E2530',
+    padding: 16,
+    borderRadius: 14,
+    marginVertical: 12,
+    alignItems: 'center',
+    width: '100%',
+    borderWidth: 1,
+    borderColor: '#0A84FF',
+  },
+  aiLoadingTitle: {
+    color: '#0A84FF',
+    fontSize: 14,
+    fontWeight: '800',
+    marginTop: 8,
+    textAlign: 'center',
+  },
+  aiLoadingSub: {
+    color: '#AEAEB2',
+    fontSize: 11,
+    marginTop: 4,
+    textAlign: 'center',
+  },
+  geminiAskBtn: {
+    backgroundColor: '#0A84FF',
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 14,
+    width: '100%',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  geminiAskBtnText: {
+    color: '#FFFFFF',
+    fontSize: 14,
+    fontWeight: '800',
+  },
+  geminiAskBtnSub: {
+    color: 'rgba(255, 255, 255, 0.8)',
+    fontSize: 11,
+    marginTop: 3,
   },
   cartSection: {
     gap: 10,

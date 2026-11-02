@@ -2,10 +2,8 @@ import { BrowserMultiFormatReader, DecodeHintType, BarcodeFormat } from '@zxing/
 
 /**
  * 캔버스를 이용한 고성능 다단계 이미지 바코드 디코더
- * 1단계: 브라우저 네이티브 BarcodeDetector
- * 2단계: ZXing 원본 스캔
- * 3단계: 캔버스 대비(Contrast) 향상 + 흑백 이진화
- * 4단계: 90도 회전 스캔 (스마트폰 세로/가로 회전 보정)
+ * 한국 편의점·마트 유통 상품의 99.9%는 13자리 EAN-13(880...) 바코드입니다.
+ * 13자리 바코드 일부를 8자리(EAN-8)로 조기 오인식하는 문제를 방지하기 위해 EAN-13을 최우선으로 정밀 스캔합니다.
  */
 export async function scanBarcodeFromImageFile(file: File): Promise<{
   success: boolean;
@@ -21,18 +19,19 @@ export async function scanBarcodeFromImageFile(file: File): Promise<{
     img.crossOrigin = 'anonymous';
 
     img.onload = async () => {
-      // 1. 네이티브 BarcodeDetector (가장 빠름)
+      // 1단계: 브라우저 네이티브 BarcodeDetector (EAN-13 최우선 단독 스캔으로 오인식 원천 차단)
       try {
         if (typeof window !== 'undefined' && 'BarcodeDetector' in window) {
           const detector = new (window as any).BarcodeDetector({
-            formats: ['ean_13', 'ean_8', 'upc_a', 'upc_e', 'code_128', 'code_39', 'qr_code'],
+            formats: ['ean_13', 'code_128', 'upc_a'],
           });
           const results = await detector.detect(img);
           if (results && results.length > 0) {
+            const best = results.find((r: any) => r.format === 'ean_13') || results[0];
             resolve({
               success: true,
-              barcode: results[0].rawValue,
-              format: results[0].format,
+              barcode: best.rawValue,
+              format: best.format,
               previewUrl,
             });
             return;
@@ -42,15 +41,12 @@ export async function scanBarcodeFromImageFile(file: File): Promise<{
         // fallback
       }
 
-      // 2. ZXing 기본 힌트 설정 (EAN-13, EAN-8, UPC 우선)
+      // 2단계: ZXing 정밀 스캔 (EAN-13 최우선)
       const hints = new Map();
       hints.set(DecodeHintType.POSSIBLE_FORMATS, [
         BarcodeFormat.EAN_13,
-        BarcodeFormat.EAN_8,
-        BarcodeFormat.UPC_A,
-        BarcodeFormat.UPC_E,
         BarcodeFormat.CODE_128,
-        BarcodeFormat.CODE_39,
+        BarcodeFormat.UPC_A,
       ]);
       hints.set(DecodeHintType.TRY_HARDER, true);
 
@@ -72,13 +68,12 @@ export async function scanBarcodeFromImageFile(file: File): Promise<{
         // continue to pass 3
       }
 
-      // 3. 캔버스 전처리: 스마트폰 고해상도 리사이즈 및 흑백 대비 보정
+      // 3단계: 캔버스 전처리 (리사이즈 + 흑백 명암 대비 극대화)
       try {
         if (typeof document !== 'undefined') {
           const canvas = document.createElement('canvas');
           const ctx = canvas.getContext('2d');
 
-          // 너무 큰 사진(4000px 이상)은 축소하여 바코드 라인이 뭉개지지 않게
           let w = img.naturalWidth || img.width;
           let h = img.naturalHeight || img.height;
           const maxDim = 1600;
@@ -94,29 +89,42 @@ export async function scanBarcodeFromImageFile(file: File): Promise<{
           if (ctx) {
             ctx.drawImage(img, 0, 0, w, h);
 
-            // 흑백 대비 강화 필터 적용
+            // 흑백 대비 강화 필터
             const imgData = ctx.getImageData(0, 0, w, h);
             const d = imgData.data;
             for (let i = 0; i < d.length; i += 4) {
-              const r = d[i];
-              const g = d[i + 1];
-              const b = d[i + 2];
-              // 명도 계산
-              const gray = 0.299 * r + 0.587 * g + 0.114 * b;
-              // 대비(Contrast) 확장
-              const contrast = (gray - 128) * 1.5 + 128;
-              const finalVal = Math.min(255, Math.max(0, contrast));
-              d[i] = finalVal;
-              d[i + 1] = finalVal;
-              d[i + 2] = finalVal;
+              const gray = 0.299 * d[i] + 0.587 * d[i + 1] + 0.114 * d[i + 2];
+              const contrast = (gray - 128) * 1.6 + 128;
+              const val = Math.min(255, Math.max(0, contrast));
+              d[i] = val;
+              d[i + 1] = val;
+              d[i + 2] = val;
             }
             ctx.putImageData(imgData, 0, 0);
 
-            // 캔버스에서 재디코딩
             const enhancedUrl = canvas.toDataURL('image/png');
             const enhancedImg = new Image();
             enhancedImg.src = enhancedUrl;
             await new Promise((r) => (enhancedImg.onload = r));
+
+            // 전처리 이미지로 네이티브 + ZXing 재시도
+            try {
+              if (typeof window !== 'undefined' && 'BarcodeDetector' in window) {
+                const det2 = new (window as any).BarcodeDetector({
+                  formats: ['ean_13', 'code_128', 'upc_a'],
+                });
+                const r2 = await det2.detect(enhancedImg);
+                if (r2 && r2.length > 0) {
+                  resolve({
+                    success: true,
+                    barcode: r2[0].rawValue,
+                    format: r2[0].format,
+                    previewUrl,
+                  });
+                  return;
+                }
+              }
+            } catch (e) {}
 
             try {
               const res2 = await reader.decodeFromImageElement(enhancedImg);
@@ -129,11 +137,9 @@ export async function scanBarcodeFromImageFile(file: File): Promise<{
                 });
                 return;
               }
-            } catch (e2) {
-              // try rotation pass 4
-            }
+            } catch (e2) {}
 
-            // 4. 90도 회전 스캔 (스마트폰을 돌려 찍은 경우)
+            // 4단계: 90도 회전 스캔 (스마트폰 회전 사진 대응)
             const rotCanvas = document.createElement('canvas');
             rotCanvas.width = h;
             rotCanvas.height = w;
@@ -159,15 +165,30 @@ export async function scanBarcodeFromImageFile(file: File): Promise<{
                   });
                   return;
                 }
-              } catch (e3) {
-                // not found
-              }
+              } catch (e3) {}
             }
           }
         }
       } catch (err) {
         console.warn('Canvas preprocessing error:', err);
       }
+
+      // 5단계: 최후의 보루 (EAN-8 등 희귀 포맷 포함 전체 스캔)
+      try {
+        const fallbackHints = new Map();
+        fallbackHints.set(DecodeHintType.TRY_HARDER, true);
+        const fallbackReader = new BrowserMultiFormatReader(fallbackHints);
+        const lastRes = await fallbackReader.decodeFromImageElement(img);
+        if (lastRes && lastRes.getText()) {
+          resolve({
+            success: true,
+            barcode: lastRes.getText(),
+            format: lastRes.getBarcodeFormat().toString(),
+            previewUrl,
+          });
+          return;
+        }
+      } catch (e) {}
 
       resolve({
         success: false,

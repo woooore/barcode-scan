@@ -13,12 +13,16 @@ import {
 import { CameraView, useCameraPermissions, BarcodeScanningResult } from 'expo-camera';
 import { ProductItem, StoreInfo } from '../types/product';
 import { scanBarcodeFromImageFile } from '../services/imageBarcodeScanner';
+import { queryGeminiVisionForPhoto } from '../services/geminiService';
 
 interface BarcodeScannerBoxProps {
   selectedStore: StoreInfo;
   products: ProductItem[];
   onBarcodeDetected: (barcode: string) => void;
   lastScannedBarcode: string | null;
+  geminiApiKey?: string;
+  onOpenGeminiModal?: () => void;
+  onAiProductFound?: (product: ProductItem) => void;
 }
 
 export const BarcodeScannerBox: React.FC<BarcodeScannerBoxProps> = ({
@@ -26,6 +30,9 @@ export const BarcodeScannerBox: React.FC<BarcodeScannerBoxProps> = ({
   products,
   onBarcodeDetected,
   lastScannedBarcode,
+  geminiApiKey,
+  onOpenGeminiModal,
+  onAiProductFound,
 }) => {
   const [permission, requestPermission] = useCameraPermissions();
   const [cameraActive, setCameraActive] = useState(true);
@@ -37,7 +44,9 @@ export const BarcodeScannerBox: React.FC<BarcodeScannerBoxProps> = ({
   const isWeb = Platform.OS === 'web';
 
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
+  const [selectedImageFile, setSelectedImageFile] = useState<File | null>(null);
   const [isAnalyzingImage, setIsAnalyzingImage] = useState(false);
+  const [isGeminiVisionLoading, setIsGeminiVisionLoading] = useState(false);
   const [imageScanFeedback, setImageScanFeedback] = useState<{
     type: 'success' | 'error';
     message: string;
@@ -52,6 +61,7 @@ export const BarcodeScannerBox: React.FC<BarcodeScannerBoxProps> = ({
       const file = e.target?.files?.[0];
       if (!file) return;
 
+      setSelectedImageFile(file);
       setIsAnalyzingImage(true);
       setImageScanFeedback(null);
 
@@ -71,7 +81,7 @@ export const BarcodeScannerBox: React.FC<BarcodeScannerBoxProps> = ({
             type: 'error',
             message:
               result.error ||
-              '사진에서 바코드를 찾지 못했습니다. 바코드 영역이 크고 선명한 사진을 사용해 주세요.',
+              '사진에서 바코드를 찾지 못했습니다. 아래 Gemini Vision AI 버튼으로 사진을 직접 분석하거나 바코드 번호를 입력해 주세요.',
           });
         }
       } catch (err: any) {
@@ -83,6 +93,80 @@ export const BarcodeScannerBox: React.FC<BarcodeScannerBoxProps> = ({
       }
     };
     input.click();
+  };
+
+  const handleAnalyzeWithGeminiVision = async () => {
+    if (!geminiApiKey) {
+      if (onOpenGeminiModal) onOpenGeminiModal();
+      return;
+    }
+    if (!selectedImageFile) return;
+
+    setIsGeminiVisionLoading(true);
+    try {
+      const base64Data = await new Promise<string>((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result as string);
+        reader.onerror = reject;
+        reader.readAsDataURL(selectedImageFile);
+      });
+
+      const ai = await queryGeminiVisionForPhoto({
+        imageBase64: base64Data,
+        mimeType: selectedImageFile.type || 'image/jpeg',
+        storeId: selectedStore.id,
+        apiKey: geminiApiKey,
+      });
+
+      setIsGeminiVisionLoading(false);
+
+      if (ai) {
+        setImageScanFeedback({
+          type: 'success',
+          message: `✨ Gemini AI가 상품을 감지했습니다: ${ai.name} (${ai.price.toLocaleString()}원)`,
+        });
+        const finalBarcode = ai.barcode && ai.barcode.length >= 8 ? ai.barcode : `ai_${Date.now()}`;
+        if (ai.barcode) {
+          onBarcodeDetected(ai.barcode);
+        }
+        if (onAiProductFound) {
+          const aiProd: ProductItem = {
+            barcode: finalBarcode,
+            name: ai.name,
+            brand: ai.brand,
+            category: ai.category,
+            volumeOrWeight: ai.volumeOrWeight,
+            imageEmoji: '🤖',
+            stores: {
+              [selectedStore.id]: {
+                price: ai.price,
+                promoType: ai.promoType,
+                promoLabel:
+                  ai.promoLabel ||
+                  (ai.promoType !== 'NONE'
+                    ? `${ai.promoType} 행사 상품`
+                    : '정가 판매'),
+                updatedAt: new Date().toISOString().slice(0, 10),
+              },
+            },
+            isUserContributed: true,
+          };
+          onAiProductFound(aiProd);
+        }
+      } else {
+        setImageScanFeedback({
+          type: 'error',
+          message:
+            'Gemini AI가 사진 속 상품명을 명확히 판독하지 못했습니다. 더 선명한 사진으로 시도해 주세요.',
+        });
+      }
+    } catch (err) {
+      setIsGeminiVisionLoading(false);
+      setImageScanFeedback({
+        type: 'error',
+        message: 'Gemini Vision 분석 중 오류가 발생했습니다.',
+      });
+    }
   };
 
   const handleBarCodeScanned = (result: BarcodeScanningResult) => {
@@ -368,6 +452,34 @@ export const BarcodeScannerBox: React.FC<BarcodeScannerBoxProps> = ({
                 {imageScanFeedback.message}
               </Text>
             </View>
+          )}
+
+          {uploadedImage && (
+            <TouchableOpacity
+              style={styles.geminiVisionBtn}
+              onPress={handleAnalyzeWithGeminiVision}
+              disabled={isGeminiVisionLoading}
+            >
+              {isGeminiVisionLoading ? (
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                  <ActivityIndicator color="#FFFFFF" size="small" />
+                  <Text style={styles.geminiVisionBtnText}>
+                    🤖 Gemini AI가 사진 속 글씨·제품명·가격을 판독 중...
+                  </Text>
+                </View>
+              ) : (
+                <View style={{ alignItems: 'center' }}>
+                  <Text style={styles.geminiVisionBtnText}>
+                    ✨ Gemini Vision AI로 사진 속 제품명·가격 바로 판독하기
+                  </Text>
+                  <Text style={styles.geminiVisionBtnSub}>
+                    {geminiApiKey
+                      ? '바코드 선이 흐려도 사진 속 상품 글씨를 AI가 직접 읽어냅니다'
+                      : 'AI 키 연결 후 사진을 자동으로 분석합니다'}
+                  </Text>
+                </View>
+              )}
+            </TouchableOpacity>
           )}
         </View>
       )}
@@ -737,5 +849,25 @@ const styles = StyleSheet.create({
     color: '#30D158',
     fontSize: 12,
     fontWeight: '800',
+  },
+  geminiVisionBtn: {
+    backgroundColor: '#0A84FF',
+    paddingVertical: 11,
+    paddingHorizontal: 14,
+    borderRadius: 12,
+    alignItems: 'center',
+    marginTop: 8,
+    borderWidth: 1,
+    borderColor: '#0071E3',
+  },
+  geminiVisionBtnText: {
+    color: '#FFFFFF',
+    fontSize: 13,
+    fontWeight: '800',
+  },
+  geminiVisionBtnSub: {
+    color: 'rgba(255, 255, 255, 0.8)',
+    fontSize: 11,
+    marginTop: 2,
   },
 });

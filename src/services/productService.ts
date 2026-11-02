@@ -5,8 +5,11 @@ import { ProductItem, PromoType, StoreId, StorePriceInfo } from '../types/produc
 const STORAGE_KEY_PRODUCTS = '@convenience_scanner_products_v1';
 const STORAGE_KEY_HISTORY = '@convenience_scanner_history_v1';
 
-// 선택적 로컬/클라우드 크롤러 서버 주소 (서버 미실행 시에도 앱이 자체 DB + 오픈API로 즉시 동작)
-const CRAWLER_API_BASE_URL = 'http://localhost:4000/api';
+// 웹에서는 현재 접속 주소의 /api 호출 (단일 서버 연동), 네이티브에서는 포트 4000 또는 클라우드 API 호출
+const CRAWLER_API_BASE_URL =
+  typeof window !== 'undefined' && window.location?.origin
+    ? `${window.location.origin}/api`
+    : 'http://localhost:4000/api';
 
 export interface ExternalBarcodeLookupResult {
   found: boolean;
