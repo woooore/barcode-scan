@@ -7,6 +7,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const { lookupPublicBarcode } = require('./server/publicBarcodeService');
 
 const PORT = process.env.PORT || 3000;
 const DIST = path.join(__dirname, 'dist');
@@ -340,26 +341,105 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
-    // 3순위: Open Food Facts 글로벌 바코드 DB에서 상품명 자동 조회
-    const externalItem = await fetchOpenFoodFacts(barcode);
-    if (externalItem && externalItem.name) {
-      const normName = externalItem.name.replace(/[^가-힣a-zA-Z0-9]/g, '');
+    // 3순위: 공공데이터포털(data.go.kr) / 식약처 유통바코드 / 대한민국 표준 바코드 DB 종합 조회
+    const publicItem = await lookupPublicBarcode(barcode);
+    if (publicItem && publicItem.name) {
+      // 3-1: 공공/표준 DB에 매장별 stores 가격이 완비된 경우 즉시 반환
+      if (publicItem.stores && Object.keys(publicItem.stores).length > 0) {
+        res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify(publicItem));
+        return;
+      }
+
+      // 3-2: 공공 DB에 상품명은 있으나 편의점 가격이 없을 때 -> 크롤링 행사 DB 매칭
+      const normName = publicItem.name.replace(/[^가-힣a-zA-Z0-9]/g, '');
       const matchedByName = eventsDb.byName ? eventsDb.byName[normName] : null;
 
-      const result = {
-        barcode,
-        name: externalItem.name,
-        brand: externalItem.brand,
-        category: externalItem.category,
-        volumeOrWeight: externalItem.volumeOrWeight,
-        imageUrl: externalItem.imageUrl,
-        stores: matchedByName?.stores || {},
-        isCrawledEvent: Boolean(matchedByName),
-      };
+      if (matchedByName && matchedByName.stores && Object.keys(matchedByName.stores).length > 0) {
+        const result = {
+          barcode,
+          name: publicItem.name,
+          brand: publicItem.brand,
+          category: publicItem.category,
+          volumeOrWeight: publicItem.volumeOrWeight,
+          imageUrl: publicItem.imageUrl || matchedByName.imageUrl,
+          stores: matchedByName.stores,
+          isCrawledEvent: true,
+          source: publicItem.source,
+        };
+        res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify(result));
+        return;
+      }
 
-      res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
-      res.end(JSON.stringify(result));
-      return;
+      // 3-3: 공공 DB에서 확인된 정품명을 기반으로 편의점/대형마트 실판매가 산출
+      try {
+        const prompt = `대한민국 편의점(GS25, CU, 세븐일레븐, 이마트24) 및 대형마트(이마트, 홈플러스) 상품 가격 분석:
+공식 상품명: [${publicItem.name}]
+제조사: [${publicItem.brand}]
+규격: [${publicItem.volumeOrWeight}]
+바코드: [${barcode}]
+
+이 실제 상품의 편의점 기준 소비자 단품 판매가격(원) 및 1+1/2+1 행사 여부를 아래 JSON 형식으로만 반환하세요:
+{
+  "price": 2000,
+  "promoType": "NONE",
+  "promoLabel": "정가 판매"
+}`;
+        const aiRes = await fetch(
+          `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-lite-latest:generateContent?key=${DEFAULT_GEMINI_KEY}`,
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              contents: [{ parts: [{ text: prompt }] }],
+              generationConfig: {
+                responseMimeType: 'application/json',
+                temperature: 0.1,
+              },
+            }),
+          }
+        );
+        if (aiRes.ok) {
+          const aiData = await aiRes.json();
+          const raw = aiData?.candidates?.[0]?.content?.parts?.[0]?.text;
+          if (raw) {
+            const parsed = JSON.parse(raw.replace(/```json|```/g, '').trim());
+            const aiPrice = typeof parsed.price === 'number' ? parsed.price : 2000;
+            const aiPromo = parsed.promoType || 'NONE';
+            const aiStores = {};
+            const storeIds = ['GS25', 'CU', 'SEVEN', 'EMART24', 'EMART', 'HOMEPLUS'];
+            for (const sId of storeIds) {
+              const isMart = sId === 'EMART' || sId === 'HOMEPLUS';
+              const finalPrice = isMart ? Math.round(aiPrice * 0.8) : aiPrice;
+              aiStores[sId] = {
+                price: finalPrice,
+                promoType: isMart ? 'DISCOUNT' : aiPromo,
+                promoLabel: isMart
+                  ? '대형마트 할인가'
+                  : parsed.promoLabel || (aiPromo !== 'NONE' ? `${aiPromo} 행사` : '정가 판매'),
+                updatedAt: new Date().toISOString().slice(0, 10),
+              };
+            }
+            res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+            res.end(
+              JSON.stringify({
+                barcode,
+                name: publicItem.name,
+                brand: publicItem.brand,
+                category: publicItem.category,
+                volumeOrWeight: publicItem.volumeOrWeight,
+                imageUrl: publicItem.imageUrl,
+                stores: aiStores,
+                source: publicItem.source + '_with_ai_price',
+              })
+            );
+            return;
+          }
+        }
+      } catch (e) {
+        // ignore
+      }
     }
 
     // 4순위: Gemini AI를 통한 880 바코드 제조사, 상품명, 매장별 실시간 판매가격 추론

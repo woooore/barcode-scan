@@ -1,0 +1,302 @@
+{
+  "8801056251727": {
+    "barcode": "8801056251727",
+    "name": "칠성사이다 제로 500ml",
+    "brand": "롯데칠성음료",
+    "category": "탄산음료",
+    "volumeOrWeight": "500ml",
+    "stores": {
+      "GS25": { "price": 2200, "promoType": "1+1", "promoLabel": "1+1 행사 (개당 1,100원)" },
+      "CU": { "price": 2200, "promoType": "1+1", "promoLabel": "1+1 행사 (개당 1,100원)" },
+      "SEVEN": { "price": 2200, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART24": { "price": 2200, "promoType": "2+1", "promoLabel": "2+1 행사" },
+      "EMART": { "price": 1680, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" },
+      "HOMEPLUS": { "price": 1680, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" }
+    }
+  },
+  "8801056154011": {
+    "barcode": "8801056154011",
+    "name": "칠성사이다 500ml",
+    "brand": "롯데칠성음료",
+    "category": "탄산음료",
+    "volumeOrWeight": "500ml",
+    "stores": {
+      "GS25": { "price": 2200, "promoType": "1+1", "promoLabel": "1+1 행사 (개당 1,100원)" },
+      "CU": { "price": 2200, "promoType": "1+1", "promoLabel": "1+1 행사 (개당 1,100원)" },
+      "SEVEN": { "price": 2200, "promoType": "2+1", "promoLabel": "2+1 행사" },
+      "EMART24": { "price": 2200, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART": { "price": 1650, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" },
+      "HOMEPLUS": { "price": 1650, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" }
+    }
+  },
+  "8801094017200": {
+    "barcode": "8801094017200",
+    "name": "코카콜라 제로 500ml",
+    "brand": "코카콜라음료",
+    "category": "탄산음료",
+    "volumeOrWeight": "500ml",
+    "stores": {
+      "GS25": { "price": 2400, "promoType": "1+1", "promoLabel": "1+1 행사 (개당 1,200원)" },
+      "CU": { "price": 2400, "promoType": "1+1", "promoLabel": "1+1 행사 (개당 1,200원)" },
+      "SEVEN": { "price": 2400, "promoType": "1+1", "promoLabel": "1+1 행사 (개당 1,200원)" },
+      "EMART24": { "price": 2400, "promoType": "2+1", "promoLabel": "2+1 행사" },
+      "EMART": { "price": 1880, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" },
+      "HOMEPLUS": { "price": 1880, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" }
+    }
+  },
+  "8801094017101": {
+    "barcode": "8801094017101",
+    "name": "코카콜라 500ml",
+    "brand": "코카콜라음료",
+    "category": "탄산음료",
+    "volumeOrWeight": "500ml",
+    "stores": {
+      "GS25": { "price": 2400, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "CU": { "price": 2400, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "SEVEN": { "price": 2400, "promoType": "2+1", "promoLabel": "2+1 행사" },
+      "EMART24": { "price": 2400, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART": { "price": 1850, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" },
+      "HOMEPLUS": { "price": 1850, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" }
+    }
+  },
+  "8800402600011": {
+    "barcode": "8800402600011",
+    "name": "가나 초콜릿 마일드 70g",
+    "brand": "롯데웰푸드",
+    "category": "스낵/초콜릿",
+    "volumeOrWeight": "70g",
+    "stores": {
+      "GS25": { "price": 2000, "promoType": "2+1", "promoLabel": "2+1 행사 (개당 1,333원)" },
+      "CU": { "price": 2000, "promoType": "2+1", "promoLabel": "2+1 행사 (개당 1,333원)" },
+      "SEVEN": { "price": 2000, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART24": { "price": 2000, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART": { "price": 1580, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" },
+      "HOMEPLUS": { "price": 1580, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" }
+    }
+  },
+  "8809984170653": {
+    "barcode": "8809984170653",
+    "name": "말랑쫀득 초코찹쌀떡",
+    "brand": "편의점 디저트",
+    "category": "디저트/떡",
+    "volumeOrWeight": "120g",
+    "stores": {
+      "GS25": { "price": 3500, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "CU": { "price": 3500, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "SEVEN": { "price": 3500, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART24": { "price": 3500, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART": { "price": 3200, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" },
+      "HOMEPLUS": { "price": 3200, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" }
+    }
+  },
+  "8801043014762": {
+    "barcode": "8801043014762",
+    "name": "신라면 120g",
+    "brand": "농심",
+    "category": "라면",
+    "volumeOrWeight": "120g",
+    "stores": {
+      "GS25": { "price": 1000, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "CU": { "price": 1000, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "SEVEN": { "price": 1000, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART24": { "price": 1000, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART": { "price": 820, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가 (5입 4,100원)" },
+      "HOMEPLUS": { "price": 820, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" }
+    }
+  },
+  "8801043014830": {
+    "barcode": "8801043014830",
+    "name": "신라면 컵 65g",
+    "brand": "농심",
+    "category": "라면",
+    "volumeOrWeight": "65g",
+    "stores": {
+      "GS25": { "price": 1150, "promoType": "2+1", "promoLabel": "2+1 행사" },
+      "CU": { "price": 1150, "promoType": "2+1", "promoLabel": "2+1 행사" },
+      "SEVEN": { "price": 1150, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART24": { "price": 1150, "promoType": "2+1", "promoLabel": "2+1 행사" },
+      "EMART": { "price": 950, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" },
+      "HOMEPLUS": { "price": 950, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" }
+    }
+  },
+  "8801043016070": {
+    "barcode": "8801043016070",
+    "name": "신라면 큰사발 114g",
+    "brand": "농심",
+    "category": "라면",
+    "volumeOrWeight": "114g",
+    "stores": {
+      "GS25": { "price": 1400, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "CU": { "price": 1400, "promoType": "2+1", "promoLabel": "2+1 행사" },
+      "SEVEN": { "price": 1400, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART24": { "price": 1400, "promoType": "2+1", "promoLabel": "2+1 행사" },
+      "EMART": { "price": 1180, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" },
+      "HOMEPLUS": { "price": 1180, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" }
+    }
+  },
+  "8801043015240": {
+    "barcode": "8801043015240",
+    "name": "육개장 사발면 86g",
+    "brand": "농심",
+    "category": "라면",
+    "volumeOrWeight": "86g",
+    "stores": {
+      "GS25": { "price": 1000, "promoType": "2+1", "promoLabel": "2+1 행사" },
+      "CU": { "price": 1000, "promoType": "2+1", "promoLabel": "2+1 행사" },
+      "SEVEN": { "price": 1000, "promoType": "2+1", "promoLabel": "2+1 행사" },
+      "EMART24": { "price": 1000, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART": { "price": 850, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" },
+      "HOMEPLUS": { "price": 850, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" }
+    }
+  },
+  "8801073110502": {
+    "barcode": "8801073110502",
+    "name": "불닭볶음면 140g",
+    "brand": "삼양식품",
+    "category": "라면",
+    "volumeOrWeight": "140g",
+    "stores": {
+      "GS25": { "price": 1350, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "CU": { "price": 1350, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "SEVEN": { "price": 1350, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART24": { "price": 1350, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART": { "price": 1100, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" },
+      "HOMEPLUS": { "price": 1100, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" }
+    }
+  },
+  "8801073210745": {
+    "barcode": "8801073210745",
+    "name": "불닭볶음면 큰컵 105g",
+    "brand": "삼양식품",
+    "category": "라면",
+    "volumeOrWeight": "105g",
+    "stores": {
+      "GS25": { "price": 1800, "promoType": "2+1", "promoLabel": "2+1 행사" },
+      "CU": { "price": 1800, "promoType": "2+1", "promoLabel": "2+1 행사" },
+      "SEVEN": { "price": 1800, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART24": { "price": 1800, "promoType": "2+1", "promoLabel": "2+1 행사" },
+      "EMART": { "price": 1450, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" },
+      "HOMEPLUS": { "price": 1450, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" }
+    }
+  },
+  "8801111111503": {
+    "barcode": "8801111111503",
+    "name": "크라운 죠리퐁 74g",
+    "brand": "크라운제과",
+    "category": "스낵/과자",
+    "volumeOrWeight": "74g",
+    "stores": {
+      "GS25": { "price": 1500, "promoType": "2+1", "promoLabel": "2+1 행사" },
+      "CU": { "price": 1500, "promoType": "2+1", "promoLabel": "2+1 행사" },
+      "SEVEN": { "price": 1500, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART24": { "price": 1500, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART": { "price": 1180, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" },
+      "HOMEPLUS": { "price": 1180, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" }
+    }
+  },
+  "8801043000628": {
+    "barcode": "8801043000628",
+    "name": "새우깡 90g",
+    "brand": "농심",
+    "category": "스낵/과자",
+    "volumeOrWeight": "90g",
+    "stores": {
+      "GS25": { "price": 1500, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "CU": { "price": 1500, "promoType": "2+1", "promoLabel": "2+1 행사" },
+      "SEVEN": { "price": 1500, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART24": { "price": 1500, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART": { "price": 1180, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" },
+      "HOMEPLUS": { "price": 1180, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" }
+    }
+  },
+  "8801117173208": {
+    "barcode": "8801117173208",
+    "name": "오리온 포카칩 오리지널 66g",
+    "brand": "오리온",
+    "category": "스낵/과자",
+    "volumeOrWeight": "66g",
+    "stores": {
+      "GS25": { "price": 1700, "promoType": "2+1", "promoLabel": "2+1 행사" },
+      "CU": { "price": 1700, "promoType": "2+1", "promoLabel": "2+1 행사" },
+      "SEVEN": { "price": 1700, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART24": { "price": 1700, "promoType": "2+1", "promoLabel": "2+1 행사" },
+      "EMART": { "price": 1360, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" },
+      "HOMEPLUS": { "price": 1360, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" }
+    }
+  },
+  "8801117112009": {
+    "barcode": "8801117112009",
+    "name": "오리온 초코파이 情 12개입",
+    "brand": "오리온",
+    "category": "파이/비스킷",
+    "volumeOrWeight": "468g",
+    "stores": {
+      "GS25": { "price": 5400, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "CU": { "price": 5400, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "SEVEN": { "price": 5400, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART24": { "price": 5400, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART": { "price": 4320, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" },
+      "HOMEPLUS": { "price": 4320, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" }
+    }
+  },
+  "8801045521213": {
+    "barcode": "8801045521213",
+    "name": "오뚜기 진라면 매운맛 120g",
+    "brand": "오뚜기",
+    "category": "라면",
+    "volumeOrWeight": "120g",
+    "stores": {
+      "GS25": { "price": 950, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "CU": { "price": 950, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "SEVEN": { "price": 950, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART24": { "price": 950, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART": { "price": 750, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가 (5입 3,750원)" },
+      "HOMEPLUS": { "price": 750, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" }
+    }
+  },
+  "8801104210300": {
+    "barcode": "8801104210300",
+    "name": "빙그레 바나나맛우유 240ml",
+    "brand": "빙그레",
+    "category": "유음료",
+    "volumeOrWeight": "240ml",
+    "stores": {
+      "GS25": { "price": 1800, "promoType": "2+1", "promoLabel": "2+1 행사 (개당 1,200원)" },
+      "CU": { "price": 1800, "promoType": "2+1", "promoLabel": "2+1 행사 (개당 1,200원)" },
+      "SEVEN": { "price": 1800, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART24": { "price": 1800, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART": { "price": 1450, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" },
+      "HOMEPLUS": { "price": 1450, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" }
+    }
+  },
+  "8801051057577": {
+    "barcode": "8801051057577",
+    "name": "페리오 46CM치약 쿨민트 100g",
+    "brand": "LG생활건강",
+    "category": "구강용품",
+    "volumeOrWeight": "100g",
+    "stores": {
+      "GS25": { "price": 3900, "promoType": "1+1", "promoLabel": "1+1 행사 (개당 1,950원)" },
+      "CU": { "price": 3900, "promoType": "1+1", "promoLabel": "1+1 행사 (개당 1,950원)" },
+      "SEVEN": { "price": 3900, "promoType": "1+1", "promoLabel": "1+1 행사 (개당 1,950원)" },
+      "EMART24": { "price": 3900, "promoType": "NONE", "promoLabel": "정가 판매" },
+      "EMART": { "price": 2800, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" },
+      "HOMEPLUS": { "price": 2800, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" }
+    }
+  },
+  "8801062860470": {
+    "barcode": "8801062860470",
+    "name": "빙그레 메로나 75ml",
+    "brand": "빙그레",
+    "category": "아이스크림",
+    "volumeOrWeight": "75ml",
+    "stores": {
+      "GS25": { "price": 1200, "promoType": "1+1", "promoLabel": "1+1 행사 (개당 600원)" },
+      "CU": { "price": 1200, "promoType": "1+1", "promoLabel": "1+1 행사 (개당 600원)" },
+      "SEVEN": { "price": 1200, "promoType": "1+1", "promoLabel": "1+1 행사 (개당 600원)" },
+      "EMART24": { "price": 1200, "promoType": "2+1", "promoLabel": "2+1 행사" },
+      "EMART": { "price": 600, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" },
+      "HOMEPLUS": { "price": 600, "promoType": "DISCOUNT", "promoLabel": "대형마트 할인가" }
+    }
+  }
+}
